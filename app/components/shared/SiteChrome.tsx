@@ -129,7 +129,7 @@ export function SiteNav({ activePath }: { activePath: string }) {
       <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-3 md:px-8 md:py-4">
         <Link className="h-14 w-auto shrink-0 md:h-16" href="/">
           <img
-            src="/LogoFelizdent.PNG"
+            src="/images/LogoFelizdent.PNG"
             alt="Felizdent"
             className="h-full w-auto object-contain"
           />

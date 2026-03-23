@@ -16,7 +16,7 @@ export default function Home() {
                 <span className="font-normal text-accent-purple">Por el gusto de verte sonreir</span>
               </h1>
               <p className="text-on-surface-variant mb-12 max-w-md text-base leading-relaxed font-light">
-                Mas de 20 anos transformando sonrisas. En Felizdent fusionamos tecnologia de vanguardia con un trato humano excepcional para ofrecerte el cuidado dental que mereces.
+                Mas de 20 años transformando sonrisas. En Felizdent fusionamos tecnologia de vanguardia con un trato humano excepcional para ofrecerte el cuidado dental que mereces.
               </p>
               <div className="text-secondary flex flex-wrap items-center gap-8 text-xs font-medium tracking-[0.15em] uppercase">
                 <span className="flex items-center gap-2">
@@ -47,7 +47,7 @@ export default function Home() {
                 <img
                   className="h-full w-full object-cover opacity-95"
                   alt="Sala de tratamiento dental moderna"
-                  src="/images/hero-room.jpg"
+                  src="/images/mision.jpg"
                 />
               </div>
             </div>
@@ -139,22 +139,22 @@ export default function Home() {
             <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
               {[
                 {
-                  name: "Dr. Alejandro Ruiz",
-                  area: "Ortodoncia",
-                  text: "Especialista en alineacion dental avanzada y sistemas invisibles con mas de 12 anos de trayectoria.",
-                  image: "/images/doctor-alejandro.jpg",
+                  name: "Dra. Yazmin Téllez Bautista",
+                  area: "Estomatología y Especialista en Endodoncia",
+                  text: "Especialista en alineacion dental avanzada y sistemas invisibles con mas de 15 años de trayectoria.",
+                  image: "/images/DoctoraYazInicio.jpg",
                 },
                 {
-                  name: "Dra. Elena Torres",
-                  area: "Odontopediatria",
+                  name: "Dra. Isabel Chávez",
+                  area: "Estomatología Pediátrica",
                   text: "Experta en el cuidado dental infantil, creando experiencias positivas y educativas para los mas pequenos.",
-                  image: "/images/doctor-elena.jpg",
+                  image: "/images/DoctoraIsabelInicio.jpg",
                 },
                 {
-                  name: "Dr. Roberto Mendez",
-                  area: "Implantologia",
+                  name: "Dra. Bricia Pascuala López López",
+                  area: "Estomatología",
                   text: "Rehabilitacion oral compleja y cirugia de implantes con un enfoque en estetica funcional y natural.",
-                  image: "/images/doctor-roberto.jpg",
+                  image: "/images/DoctoraBrizInicio.jpg",
                 },
               ].map((doctor, index) => (
                 <article key={doctor.name} className={`specialist-card reveal ${index === 0 ? "reveal-d1" : index === 1 ? "reveal-d2" : "reveal-d3"}`}>
@@ -177,18 +177,22 @@ export default function Home() {
         <section className="section-frame border-outline/30 overflow-hidden border-y py-20 md:py-24">
           <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-14 px-6 md:px-8 lg:grid-cols-2 lg:gap-20">
             <div className="reveal order-2 lg:order-1">
-              <h2 className="font-headline mb-8 text-3xl font-light text-on-background">Nuestra Mision</h2>
+              <h2 className="font-headline mb-8 text-3xl font-light text-on-background">Nuestra Misión</h2>
               <p className="border-primary mb-12 border-l-2 py-2 pl-8 text-xl leading-relaxed font-light text-on-surface italic">
-                "Transformamos vidas a traves de sonrisas saludables, combinando tecnologia de punta con el toque humano que nos define."
+                "Transformar vidas a través de sonrisas saludables y estéticas; mejorando su autoestima, concientizando la importancia de la salud bucal, apoyados de un equipo de especialistas altamente calificados, aplicando innovación tecnológica, trato humano, para ofrecer soluciones integrales, personalizadas y con la confianza de estar en las mejores manos."
               </p>
               <div className="space-y-6">
                 <div className="text-on-surface-variant flex items-center gap-4 text-sm font-light">
                   <span className="bg-accent-purple/60 size-2 rounded-full" />
-                  Compromiso Social Permanente
+                  Especialistas altamente calificados
                 </div>
                 <div className="text-on-surface-variant flex items-center gap-4 text-sm font-light">
                   <span className="bg-accent-purple/60 size-2 rounded-full" />
-                  Enfoque en Autoestima y Bienestar
+                  Innovación tecnológica y trato humano
+                </div>
+                <div className="text-on-surface-variant flex items-center gap-4 text-sm font-light">
+                  <span className="bg-accent-purple/60 size-2 rounded-full" />
+                  Soluciones integrales y personalizadas
                 </div>
               </div>
             </div>

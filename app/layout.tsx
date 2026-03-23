@@ -17,7 +17,7 @@ const sourceSerif = Source_Serif_4({
 
 export const metadata: Metadata = {
   title: "Felizdent | Clinica Dental en Puebla",
-  description: "Clinica dental con enfoque humano y tecnologia de vanguardia. Mas de 20 anos transformando sonrisas en Puebla.",
+  description: "Clinica dental con enfoque humano y tecnologia de vanguardia. Mas de 20 años transformando sonrisas en Puebla.",
 };
 
 export default function RootLayout({

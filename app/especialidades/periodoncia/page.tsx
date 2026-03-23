@@ -37,7 +37,7 @@ export default function PeriodonciaPage() {
                 Cuida la salud de tus encias con tratamientos especializados enfocados en prevenir y tratar enfermedades periodontales para mantener una sonrisa saludable.
               </p>
               <p className="text-on-surface-variant mb-5 text-base leading-relaxed font-light">
-                En Felizdent contamos con especialistas altamente capacitados para periodontitis y gingivitis. Segun estudios, mas del 80% de personas mayores de 35 anos presenta algun problema gingival.
+                En Felizdent contamos con especialistas altamente capacitados para periodontitis y gingivitis. Segun estudios, mas del 80% de personas mayores de 35 años presenta algun problema gingival.
               </p>
               <p className="text-on-surface-variant text-base leading-relaxed font-light">
                 Si no se trata a tiempo, la enfermedad periodontal puede avanzar hasta la perdida de dientes. Actuar en etapas tempranas marca la diferencia.
