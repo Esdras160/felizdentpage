@@ -1,0 +1,38 @@
+
+> felizdent@0.1.0 build
+> next build
+
+▲ Next.js 16.1.7 (Turbopack)
+
+  Creating an optimized production build ...
+
+> Build error occurred
+Error: Turbopack build failed with 2 errors:
+./app/tratamientos/page.tsx:105:5
+Parsing ecmascript source code failed
+[0m [90m 103 |[39m   )[33m;[39m
+ [90m 104 |[39m }
+[31m[1m>[22m[39m[90m 105 |[39m     [33m<[39m[33m/[39m[33m>[39m
+ [90m     |[39m     [31m[1m^[22m[39m
+ [90m 106 |[39m   )[33m;[39m
+ [90m 107 |[39m }
+ [90m 108 |[39m[0m
+
+Expression expected
+
+
+./app/tratamientos/page.tsx:105:6
+Parsing ecmascript source code failed
+[0m [90m 103 |[39m   )[33m;[39m
+ [90m 104 |[39m }
+[31m[1m>[22m[39m[90m 105 |[39m     [33m<[39m[33m/[39m[33m>[39m
+ [90m     |[39m      [31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 106 |[39m   )[33m;[39m
+ [90m 107 |[39m }
+ [90m 108 |[39m[0m
+
+Unterminated regexp literal
+
+
+    at <unknown> (./app/tratamientos/page.tsx:105:5)
+    at <unknown> (./app/tratamientos/page.tsx:105:6)

@@ -1,26 +1,829 @@
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-headline: var(--font-headline), "Montserrat", sans-serif;
+  --font-body: var(--font-body), "Mona Sans", sans-serif;
+  --color-primary:  #55baa8;
+  --color-secondary: #3d4442;
+  --color-accent-purple: #8a63f1;
+  --color-surface: #fcfdfc;
+  --color-surface-container: #f1f4f2;
+  --color-on-background: #181c1b;
+  --color-on-surface: #181c1b;
+  --color-on-surface-variant: #3a3f3e;
+  --color-outline: #dbe3e0;
+  --color-surface-tint: #4a9b8e;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  --editorial-mist: rgba(74, 155, 142, 0.1);
+  --editorial-sand: rgba(193, 172, 132, 0.12);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
+  color: var(--color-on-background);
+  font-weight: 400;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+}
+
+.minimal-border {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.editorial-surface {
+  position: relative;
+  isolation: isolate;
+}
+
+.editorial-surface::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(circle at 12% 9%, var(--editorial-mist), transparent 36%),
+    radial-gradient(circle at 88% 19%, var(--editorial-sand), transparent 33%),
+    linear-gradient(180deg, #fdfefd 0%, #f8faf9 56%, #f7f8f7 100%);
+  pointer-events: none;
+}
+
+.section-frame {
+  position: relative;
+}
+
+.section-frame::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(74, 155, 142, 0.16), transparent);
+}
+
+.eyebrow {
+  color: #3f6f67;
+  letter-spacing: 0.28em;
+}
+
+/* ─── CTA Buttons ─── */
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 2rem;
+  border-radius: 999px;
+  background: var(--color-primary);
+  color: white;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  transition: background 250ms ease, transform 250ms ease, box-shadow 250ms ease;
+  box-shadow: 0 4px 16px rgba(74, 155, 142, 0.25);
+}
+
+.cta-button:hover {
+  background: #3d857a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(74, 155, 142, 0.35);
+}
+
+.cta-button-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 2rem;
+  border-radius: 999px;
+  border: 1.5px solid var(--color-primary);
+  color: var(--color-primary);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  transition: background 250ms ease, color 250ms ease, transform 250ms ease;
+}
+
+.cta-button-outline:hover {
+  background: var(--color-primary);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* ─── Stats strip ─── */
+.stats-strip {
+  position: relative;
+  padding: 3rem 0;
+  background: linear-gradient(135deg, rgba(74, 155, 142, 0.06) 0%, rgba(138, 99, 241, 0.04) 100%);
+  border-top: 1px solid rgba(74, 155, 142, 0.1);
+  border-bottom: 1px solid rgba(74, 155, 142, 0.1);
+}
+
+/* ─── WhatsApp floating button ─── */
+.whatsapp-float {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #25d366;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+  transition: transform 250ms ease, box-shadow 250ms ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 28px rgba(37, 211, 102, 0.5);
+}
+
+.hero-image-wrap {
+  border: 1px solid rgba(74, 155, 142, 0.18);
+  box-shadow: 0 22px 44px rgba(12, 19, 17, 0.08);
+}
+
+.hero-image-wrap img {
+  transition: transform 900ms ease, filter 900ms ease;
+}
+
+.hero-image-wrap:hover img {
+  transform: scale(1.04);
+  filter: saturate(1.08);
+}
+
+/* ── Hero entry animations ── */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-in-up {
+  animation: fadeUp 650ms ease-out both;
+}
+
+.animate-in-up-delay {
+  animation: fadeUp 800ms 120ms ease-out both;
+}
+
+/* ── Scroll-reveal: elementos comienzan ocultos y aparecen al entrar en viewport ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 550ms ease-out, transform 550ms ease-out;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger delays para grids */
+.reveal-d1 { transition-delay: 80ms; }
+.reveal-d2 { transition-delay: 160ms; }
+.reveal-d3 { transition-delay: 240ms; }
+.reveal-d4 { transition-delay: 320ms; }
+.reveal-d5 { transition-delay: 400ms; }
+
+/* ── Card lift hover ── */
+.card-lift {
+  transition: transform 300ms ease, box-shadow 300ms ease, border-color 300ms ease;
+}
+
+.card-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.07);
+}
+
+/* ── Value icon animate ── */
+.value-icon {
+  transition: transform 300ms ease, color 300ms ease;
+}
+
+.value-icon:hover {
+  transform: scale(1.2) rotate(-5deg);
+}
+
+.value-card {
+  border: 1px solid rgba(74, 155, 142, 0.16);
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.9), rgba(246, 249, 248, 0.9));
+  transition: transform 300ms ease, box-shadow 300ms ease, border-color 300ms ease;
+}
+
+.value-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(74, 155, 142, 0.35);
+  box-shadow: 0 16px 30px rgba(16, 30, 27, 0.08);
+}
+
+.value-icon-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  background: rgba(138, 99, 241, 0.1);
+  border: 1px solid rgba(138, 99, 241, 0.2);
+}
+
+/* ── Specialty cards with image reveal on hover ── */
+.specialty-card {
+  perspective: 1000px;
+}
+
+.specialty-card:hover {
+  border-color: rgba(74, 155, 142, 0.35);
+  box-shadow: 0 12px 24px rgba(16, 30, 27, 0.06);
+}
+
+/* ── Animated underline for active nav link ── */
+.nav-link-active {
+  position: relative;
+}
+
+.nav-link-active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 1.5px;
+  background-color: var(--color-primary);
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: transform 250ms ease;
+}
+
+.profile-card {
+  overflow: hidden;
+  border: 1px solid rgba(74, 155, 142, 0.18);
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 14px 28px rgba(13, 24, 21, 0.06);
+}
+
+/* ── Dentist cards (redesigned) ── */
+.dentist-card {
+  overflow: hidden;
+  border: 1px solid rgba(74, 155, 142, 0.16);
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 12px 24px rgba(13, 24, 21, 0.05);
+  transition: transform 280ms ease, box-shadow 280ms ease, border-color 280ms ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.dentist-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(138, 99, 241, 0.25);
+  box-shadow: 0 18px 36px rgba(13, 24, 21, 0.08);
+}
+
+.dentist-image-wrap {
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(74, 155, 142, 0.12);
+}
+
+.dentist-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 700ms ease;
+}
+
+.dentist-card:hover .dentist-image-wrap img {
+  transform: scale(1.05);
+}
+
+.dentist-content {
+  padding: 1.5rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.dentist-info-row {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+
+.dentist-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  border: 1px solid rgba(74, 155, 142, 0.24);
+  border-radius: 999px;
+  background: rgba(74, 155, 142, 0.08);
+  flex-shrink: 0;
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+.dentist-details {
+  border-top: 1px solid rgba(74, 155, 142, 0.14);
+  padding-top: 1rem;
+  margin-top: auto;
+}
+
+.dentist-summary {
+  cursor: pointer;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.7rem;
+  font-weight: 700;
+  user-select: none;
+  transition: color 250ms ease;
+}
+
+.dentist-summary:hover {
+  color: var(--color-accent-purple);
+}
+
+.dentist-details[open] .dentist-summary {
+  margin-bottom: 0.875rem;
+}
+
+.dentist-details-body {
+  border-left: 2px solid rgba(74, 155, 142, 0.18);
+  padding-left: 0.75rem;
+}
+
+.profile-image-wrap {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(74, 155, 142, 0.16);
+}
+
+.data-row {
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  gap: 0.75rem;
+  align-items: start;
+}
+
+.data-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: 1px solid rgba(138, 99, 241, 0.22);
+  background: rgba(138, 99, 241, 0.08);
+  color: var(--color-accent-purple);
+  font-size: 0.56rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  height: 1.85rem;
+  overflow: hidden;
+  text-indent: -9999px;
+  position: relative;
+}
+
+.data-logo::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color-accent-purple);
+  opacity: 0.35;
+  text-indent: 0;
+}
+
+.details-panel {
+  border-top: 1px solid rgba(74, 155, 142, 0.16);
+  padding-top: 1.1rem;
+}
+
+.details-summary {
+  cursor: pointer;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.details-panel[open] .details-summary {
+  margin-bottom: 1rem;
+}
+
+.details-summary::marker {
+  display: none;
+}
+
+.details-body {
+  border-left: 1px solid rgba(74, 155, 142, 0.2);
+  padding-left: 1rem;
+}
+
+.specialty-panel {
+  overflow: hidden;
+  border-radius: 1rem;
+  border: 1px solid rgba(74, 155, 142, 0.16);
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 14px 30px rgba(13, 24, 21, 0.06);
+  transition: transform 280ms ease, box-shadow 280ms ease, border-color 280ms ease;
+}
+
+.specialty-panel:hover {
+  transform: translateY(-4px);
+  border-color: rgba(74, 155, 142, 0.36);
+  box-shadow: 0 18px 34px rgba(13, 24, 21, 0.08);
+}
+
+.specialty-panel-image {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+}
+
+.fact-chip {
+  border: 1px solid rgba(74, 155, 142, 0.18);
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 1.15rem;
+}
+
+.faq-card {
+  border: 1px solid rgba(74, 155, 142, 0.18);
+  border-radius: 0.9rem;
+  background: rgba(255, 255, 255, 0.96);
+  padding: 0.85rem 1rem;
+}
+
+.faq-summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  color: var(--color-on-background);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.faq-summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-answer {
+  margin-top: 0.9rem;
+  color: var(--color-on-surface-variant);
+  font-size: 0.9rem;
+  line-height: 1.55;
+  font-weight: 300;
+}
+
+/* ─── Specialist cards – minimalist (home) ─── */
+.specialist-minimal {
+  border-radius: 1rem;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(74, 155, 142, 0.12);
+  transition: transform 300ms ease, box-shadow 300ms ease, border-color 300ms ease;
+}
+
+.specialist-minimal:hover {
+  transform: translateY(-4px);
+  border-color: rgba(138, 99, 241, 0.28);
+  box-shadow: 0 16px 32px rgba(10, 22, 19, 0.08);
+}
+
+.specialist-minimal-photo {
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+}
+
+.specialist-minimal-photo img {
+  transition: transform 700ms ease;
+}
+
+.specialist-minimal:hover .specialist-minimal-photo img {
+  transform: scale(1.03);
+}
+
+.specialist-minimal-body {
+  padding: 1.5rem 1.5rem 1.75rem;
+}
+
+/* ─── Specialist cards – centered card design (home v2) ─── */
+.specialist-card {
+  border-radius: 1rem;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid rgba(74, 155, 142, 0.14);
+  box-shadow: 0 4px 16px rgba(13, 24, 21, 0.05);
+  transition: transform 300ms ease, box-shadow 300ms ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1.5rem 1.75rem;
+  text-align: center;
+}
+
+.specialist-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 30px rgba(13, 24, 21, 0.09);
+}
+
+.specialist-card-photo-wrap {
+  margin-bottom: 1.25rem;
+}
+
+.specialist-card-photo {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid rgba(74, 155, 142, 0.2);
+  box-shadow: 0 4px 14px rgba(74, 155, 142, 0.15);
+  transition: border-color 300ms ease;
+}
+
+.specialist-card:hover .specialist-card-photo {
+  border-color: rgba(74, 155, 142, 0.5);
+}
+
+.specialist-card-photo img {
+  transition: transform 700ms ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.specialist-card:hover .specialist-card-photo img {
+  transform: scale(1.06);
+}
+
+.specialist-card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.specialist-card-area {
+  display: inline-block;
+  margin-top: 0.35rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+/* ─── Editorial row (especialidades) ─── */
+.editorial-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  border: 1px solid rgba(74, 155, 142, 0.14);
+  border-radius: 1rem;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.95);
+  transition: border-color 280ms ease, box-shadow 280ms ease;
+}
+
+.editorial-row:hover {
+  border-color: rgba(138, 99, 241, 0.25);
+  box-shadow: 0 16px 36px rgba(10, 22, 19, 0.06);
+}
+
+@media (min-width: 768px) {
+  .editorial-row {
+    grid-template-columns: 44% 56%;
+  }
+}
+
+.editorial-row-image {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .editorial-row-image {
+    aspect-ratio: unset;
+  }
+}
+
+.editorial-row-image img {
+  transition: transform 700ms ease;
+}
+
+.editorial-row:hover .editorial-row-image img {
+  transform: scale(1.04);
+}
+
+.editorial-row-content {
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.editorial-seq {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: rgba(74, 155, 142, 0.15);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  font-family: var(--font-headline);
+  margin-bottom: 0.5rem;
+}
+
+.editorial-icon-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 999px;
+  border: 1px solid rgba(74, 155, 142, 0.28);
+  background: rgba(74, 155, 142, 0.08);
+  margin-bottom: 0.7rem;
+}
+
+/* ─── Treatment rows ─── */
+.treatment-row {
+  display: grid;
+  grid-template-columns: 3rem 1fr auto;
+  align-items: start;
+  gap: 1.5rem;
+  padding: 1.6rem 0;
+}
+
+@media (max-width: 640px) {
+  .treatment-row {
+    grid-template-columns: 2.5rem 1fr;
+  }
+}
+
+.treatment-num {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--color-primary);
+  padding-top: 0.18rem;
+  text-transform: uppercase;
+}
+
+.treatment-title {
+  font-family: var(--font-headline);
+  font-size: 1.35rem;
+  font-weight: 300;
+  color: var(--color-on-background);
+  margin-bottom: 0.45rem;
+}
+
+.treatment-desc {
+  font-size: 0.86rem;
+  font-weight: 300;
+  color: var(--color-on-surface-variant);
+  line-height: 1.65;
+  max-width: 56ch;
+}
+
+.treatment-tag {
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-accent-purple);
+  border: 1px solid rgba(138, 99, 241, 0.22);
+  padding: 0.28rem 0.75rem;
+  border-radius: 999px;
+  white-space: nowrap;
+  margin-top: 0.15rem;
+  align-self: start;
+}
+
+@media (max-width: 640px) {
+  .treatment-tag { display: none; }
+}
+
+/* ─── Clinic cards (consultorios) ─── */
+.clinic-card {
+  overflow: hidden;
+  border: 1px solid rgba(74, 155, 142, 0.16);
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 12px 26px rgba(10, 22, 19, 0.06);
+  transition: transform 280ms ease, box-shadow 280ms ease, border-color 280ms ease;
+}
+
+.clinic-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(74, 155, 142, 0.34);
+  box-shadow: 0 20px 40px rgba(10, 22, 19, 0.09);
+}
+
+.clinic-card--accent {
+  border-color: rgba(138, 99, 241, 0.22);
+  background: linear-gradient(160deg, rgba(255,255,255,0.98), rgba(246,244,255,0.9));
+}
+
+.clinic-card--accent:hover {
+  border-color: rgba(138, 99, 241, 0.42);
+}
+
+.clinic-image-wrap {
+  position: relative;
+  aspect-ratio: 16 / 8;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(74, 155, 142, 0.1);
+}
+
+.clinic-image-wrap img {
+  transition: transform 700ms ease;
+}
+
+.clinic-card:hover .clinic-image-wrap img {
+  transform: scale(1.04);
+}
+
+.clinic-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(138, 99, 241, 0.88);
+  color: white;
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.9rem;
+  border-radius: 999px;
+  backdrop-filter: blur(6px);
+}
+
+.clinic-body {
+  padding: 1.6rem 1.75rem 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.clinic-name {
+  font-family: var(--font-headline);
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--color-on-background);
+  line-height: 1.35;
+}
+
+.clinic-detail {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+}
+
+.clinic-icon {
+  margin-top: 0.12rem;
+  flex-shrink: 0;
+}
+
+.clinic-maps-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-top: 0.3rem;
+  transition: opacity 200ms;
+}
+
+.clinic-maps-link:hover { opacity: 0.7; }
+
+body {
+  @apply bg-surface font-body text-on-surface antialiased;
+}
+
+@media (max-width: 767px) {
+  .eyebrow {
+    letter-spacing: 0.2em;
+  }
 }

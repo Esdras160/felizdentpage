@@ -1,0 +1,28 @@
+▲ Next.js 16.1.7 (Turbopack)
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 23.4s
+  Running TypeScript ...
+  Collecting page data using 3 workers ...
+  Generating static pages using 3 workers (0/11) ...
+  Generating static pages using 3 workers (2/11) 
+  Generating static pages using 3 workers (5/11) 
+  Generating static pages using 3 workers (8/11) 
+✓ Generating static pages using 3 workers (11/11) in 2.4s
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ○ /consultorios
+├ ○ /dentistas
+├ ○ /especialidades
+├ ○ /especialidades/estetica-dental
+├ ○ /especialidades/odontopediatria
+├ ○ /especialidades/periodoncia
+└ ○ /tratamientos
+
+
+○  (Static)  prerendered as static content
+
+SUCCESS  
