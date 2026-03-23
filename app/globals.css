@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
 @import "tailwindcss";
 
+/* stylelint-disable at-rule-no-unknown */
 @theme inline {
   --font-headline: var(--font-headline), "Montserrat", sans-serif;
-  --font-body: var(--font-body), "Mona Sans", sans-serif;
+  --font-body: var(--font-body), "Source Serif 4", serif;
   --color-primary:  #55baa8;
   --color-secondary: #3d4442;
   --color-accent-purple: #8a63f1;
@@ -15,6 +16,7 @@
   --color-outline: #dbe3e0;
   --color-surface-tint: #4a9b8e;
 }
+/* stylelint-enable at-rule-no-unknown */
 
 :root {
   --editorial-mist: rgba(74, 155, 142, 0.1);

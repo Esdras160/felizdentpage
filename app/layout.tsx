@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Montserrat, Mona_Sans } from "next/font/google";
+import { Montserrat, Source_Serif_4 } from "next/font/google";
 import "./globals.css";
 import ScrollAnimations from "./components/ScrollAnimations";
 
@@ -9,10 +9,10 @@ const montserrat = Montserrat({
   weight: ["400", "500", "600", "700"],
 });
 
-const monaSans = Mona_Sans({
+const sourceSerif = Source_Serif_4({
   variable: "--font-body",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
+  weight: ["400", "500", "600"],
 });
 
 export const metadata: Metadata = {
@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body
-        className={`${montserrat.variable} ${monaSans.variable} antialiased`}
+        className={`${montserrat.variable} ${sourceSerif.variable} antialiased`}
       >
         <ScrollAnimations />
         {children}

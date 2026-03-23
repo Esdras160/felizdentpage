@@ -126,8 +126,8 @@ export function SiteNav({ activePath }: { activePath: string }) {
 
   return (
     <nav className="minimal-border fixed top-0 z-50 w-full bg-white/90 backdrop-blur-sm">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-8 py-6">
-        <Link className="h-12 w-auto shrink-0 md:h-14" href="/">
+      <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-3 md:px-8 md:py-4">
+        <Link className="h-14 w-auto shrink-0 md:h-16" href="/">
           <img
             src="/LogoFelizdent.PNG"
             alt="Felizdent"
