@@ -83,7 +83,7 @@ export default function AcercaPage() {
               <article className="about-gallery-card reveal reveal-d1">
                 <div className="about-gallery-media relative aspect-[16/10] overflow-hidden">
                   <Image
-                    src="/images/consultorios/consultorioSanLorenzo.jpg"
+                    src="/images/consultorio.jpeg"
                     alt="Instalaciones de Felizdent en San Lorenzo"
                     fill
                     sizes="(min-width: 768px) 55vw, 100vw"
@@ -100,7 +100,7 @@ export default function AcercaPage() {
                 <article className="about-gallery-card reveal reveal-d2">
                   <div className="about-gallery-media relative aspect-[16/10] overflow-hidden">
                     <Image
-                      src="/images/consultorios/consultorioLosReyes.jpg"
+                      src="/images/atencion.jpeg"
                       alt="Momento de atención en Felizdent"
                       fill
                       sizes="(min-width: 768px) 35vw, 100vw"
@@ -117,7 +117,7 @@ export default function AcercaPage() {
             <article className="about-gallery-card reveal reveal-d3 mt-5">
               <div className="about-gallery-media relative aspect-[21/9] overflow-hidden">
                 <Image
-                  src="/images/fotogrupal2.jpg"
+                  src="/images/fotogrupal2.png"
                   alt="Equipo de especialistas de Felizdent"
                   fill
                   sizes="100vw"

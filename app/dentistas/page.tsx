@@ -8,21 +8,13 @@ type DentistProfile = {
   details?: string[];
   image: string;
   specialty?: string;
-  hospital?: string;
-  tower?: string;
-  consultorio?: string;
-  address?: string;
 };
 
 const DENTISTS: DentistProfile[] = [
   {
     name: "Dra. Blanca Rodriguez Cortez",
     role: "Cirujano Dentista",
-    specialty: "Cirujano Dentista, Especialista en Cirugía Maxilofacial, con Maestría y Doctorado en Ciencias de la Educación y Doctorado en Salud Pública.",
-    hospital: "Hospital Ángeles Puebla",
-    tower: "Torre de Consultorios",
-    consultorio: "745",
-    address: "Av. Campos Eliseos 3371, México",
+    specialty: "Cirugía Maxilofacial",
     education: [
       "Lic. en Cirujano Dentista, Facultad de Estomatologia, Benemerita Universidad Autonoma de Puebla (1995).",
       "Especialidad en Cirugia Maxilofacial, Hospital Universitario de Puebla, Benemerita Universidad Autonoma de Puebla (1999).",
@@ -41,10 +33,6 @@ const DENTISTS: DentistProfile[] = [
     name: "Dra. Maria Elena Rodriguez Alvarez",
     role: "Estomatología",
     specialty: "Estomatología Pediátrica",
-    hospital: "Hospital Ángeles Lindavista",
-    tower: "Torre de consultorios",
-    consultorio: "330",
-    address: "Av. Rio Bamba 939, CDMX",
     education: [
       "Lic. en Estomatologia, Benemerita Universidad Autonoma de Puebla (1998-2002).",
       "Especialidad en Estomatologia Pediatrica, Instituto Nacional de Pediatria, Mexico D.F. (2008-2010).",
@@ -62,10 +50,6 @@ const DENTISTS: DentistProfile[] = [
     name: "Dra. Isabel Chavez",
     role: "Estomatología",
     specialty: "Estomatología Pediátrica",
-    hospital: "Hospital Ángeles Ciudad Juárez",
-    tower: "Torre de Consultorios",
-    consultorio: "520",
-    address: "Av. Campos Eliseos 3371, México",
     education: [
       "Lic. en Estomatologia, Benemerita Universidad Autonoma de Puebla (2002-2006).",
       "Especialidad en Estomatologia Pediatrica, Hospital para el Nino Poblano (2009-2011).",
@@ -81,11 +65,7 @@ const DENTISTS: DentistProfile[] = [
   {
     name: "Dra. Yazmin Tellez Bautista",
     role: "Estomatología",
-    specialty: "Estomatología y Especialista en Endodoncia",
-    hospital: "Hospital Ángeles Clínica Londres",
-    tower: "Torre Frontera 74",
-    consultorio: "720",
-    address: "Durango 50, Roma Nte., CDMX",
+    specialty: "Endodoncia",
     education: [
       "Lic. en Estomatologia, Benemerita Universidad Autonoma de Puebla (1998-2003).",
       "Especialidad en Endodoncia, Centro Mexicano en Estomatologia (2009-2011).",
@@ -103,10 +83,6 @@ const DENTISTS: DentistProfile[] = [
     name: "Dra. Bricia Pascuala Lopez Lopez",
     role: "Estomatología",
     specialty: "Biocosmetica Dental",
-    hospital: "Hospital Ángeles Puebla",
-    tower: "Torre de Consultorios",
-    consultorio: "450",
-    address: "Av. Campos Eliseos, México",
     education: [
       "Lic. en Estomatologia, Benemerita Universidad Autonoma de Puebla (2008-2013).",
     ],
@@ -121,11 +97,7 @@ const DENTISTS: DentistProfile[] = [
   {
     name: "Dr. Elio Federico Monterrosas Fuentes",
     role: "Estomatología",
-    specialty: "Estomatología y Especialista en Ortopedia",
-    hospital: "Hospital Ángeles Puebla",
-    tower: "Torre de Consultorios",
-    consultorio: "280",
-    address: "Av. Campos Eliseos, México",
+    specialty: "Ortopedia Maxilar",
     education: [
       "Lic. en Estomatologia, Benemerita Universidad Autonoma de Puebla (1998-2003).",
       "Especialidad en Ortopedia, Universidad Nacional Autonoma de Mexico (2009-2011).",
@@ -135,11 +107,7 @@ const DENTISTS: DentistProfile[] = [
   {
     name: "Dr. Jose Angel Perez Benitez",
     role: "Estomatología",
-    specialty: "Estomatología y Especialista en Ortodoncia y Endodoncia",
-    hospital: "Hospital Ángeles Puebla",
-    tower: "Torre de Consultorios",
-    consultorio: "640",
-    address: "Av. Campos Eliseos, México",
+    specialty: "Ortodoncia y Endodoncia",
     education: [
       "Lic. en Estomatologia, Universidad Mexico Americana del Golfo, Puebla (2011-2015).",
       "Especialidad en Endodoncia, Centro Mexicano en Estomatologia (2016-2018).",
@@ -155,11 +123,7 @@ const DENTISTS: DentistProfile[] = [
   {
     name: "Dra. Vianey Joaquina Mateo Barrales",
     role: "Estomatología",
-    specialty: "Estomatología y Salud",
-    hospital: "Hospital Ángeles Puebla",
-    tower: "Torre de Consultorios",
-    consultorio: "310",
-    address: "Av. Campos Eliseos, México",
+    specialty: "Estomatología",
     education: [
       "Lic. en Estomatologia y Salud, Centro de Investigacion y Estudios Superiores.",
     ],
@@ -174,10 +138,6 @@ const DENTISTS: DentistProfile[] = [
     name: "Dra. Maria Guadalupe Perez Ponce",
     role: "Odontología",
     specialty: "Odontología General",
-    hospital: "Hospital Ángeles Puebla",
-    tower: "Torre de Consultorios",
-    consultorio: "400",
-    address: "Av. Campos Eliseos, México",
     education: [
       "Lic. en Odontologia, Centro de Estudios Superiores de Tepeaca (2018-2023).",
     ],
@@ -191,11 +151,7 @@ const DENTISTS: DentistProfile[] = [
   {
     name: "Dra. Aylin Zayagos Fernandez",
     role: "Estomatología",
-    specialty: "Lic. en Estomatología",
-    hospital: "Hospital Ángeles Puebla",
-    tower: "Torre de Consultorios",
-    consultorio: "550",
-    address: "Av. Campos Eliseos, México",
+    specialty: "Estomatología",
     education: [
       "Facultad de Estomatologia, Benemerita Universidad Autonoma de Puebla (2018-2024).",
     ],
@@ -208,11 +164,7 @@ const DENTISTS: DentistProfile[] = [
   {
     name: "Dra. Salma Yenifer Rodriguez Camarillo",
     role: "Estomatología",
-    specialty: "Lic. en Estomatología",
-    hospital: "Hospital Ángeles Puebla",
-    tower: "Torre de Consultorios",
-    consultorio: "620",
-    address: "Av. Campos Eliseos, México",
+    specialty: "Estomatología",
     education: [
       "Lic. en Estomatologia, Benemerita Universidad Autonoma de Puebla (2018-2023).",
     ],
@@ -226,11 +178,7 @@ const DENTISTS: DentistProfile[] = [
   {
     name: "Dra. Sandra Velazquez",
     role: "Estomatología",
-    specialty: "Lic. en Estomatología con especialidad en Estomatología Pediátrica",
-    hospital: "Hospital Ángeles Puebla",
-    tower: "Torre de Consultorios",
-    consultorio: "510",
-    address: "Av. Campos Eliseos, México",
+    specialty: "Estomatología Pediátrica",
     education: [
       "Lic. en Estomatologia, Benemerita Universidad Autonoma de Puebla (2013-2019).",
       "Especialidad en Estomatologia Pediatrica, Hospital para el Nino Poblano (2023-2025).",
@@ -243,47 +191,6 @@ const DENTISTS: DentistProfile[] = [
     image: "/images/especialistas/dentistaSandra.jpg",
   },
 ];
-
-function DentistMetaIcon({ type }: { type: "hospital" | "tower" | "room" | "address" }) {
-  if (type === "hospital") {
-    return (
-      <svg aria-hidden="true" className="size-4" fill="none" viewBox="0 0 24 24">
-        <path d="M6 21V7.5A1.5 1.5 0 0 1 7.5 6H14v15" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.6" />
-        <path d="M14 21V4.5A1.5 1.5 0 0 1 15.5 3h2A1.5 1.5 0 0 1 19 4.5V21" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.6" />
-        <path d="M9 10h2M9 13h2M16 8h1.5M16 11h1.5" stroke="currentColor" strokeLinecap="round" strokeWidth="1.6" />
-        <path d="M3.5 21h17" stroke="currentColor" strokeLinecap="round" strokeWidth="1.6" />
-      </svg>
-    );
-  }
-
-  if (type === "tower") {
-    return (
-      <svg aria-hidden="true" className="size-4" fill="none" viewBox="0 0 24 24">
-        <path d="M5 21V6.5A1.5 1.5 0 0 1 6.5 5h11A1.5 1.5 0 0 1 19 6.5V21" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.6" />
-        <path d="M8 9h2M8 12h2M8 15h2M14 9h2M14 12h2M14 15h2" stroke="currentColor" strokeLinecap="round" strokeWidth="1.6" />
-        <path d="M3.5 21h17" stroke="currentColor" strokeLinecap="round" strokeWidth="1.6" />
-      </svg>
-    );
-  }
-
-  if (type === "room") {
-    return (
-      <svg aria-hidden="true" className="size-4" fill="none" viewBox="0 0 24 24">
-        <path d="M7 21V5.5A1.5 1.5 0 0 1 8.5 4h6A1.5 1.5 0 0 1 16 5.5V21" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.6" />
-        <path d="M9.5 12.5h4" stroke="currentColor" strokeLinecap="round" strokeWidth="1.6" />
-        <circle cx="13.25" cy="9.5" r="0.85" fill="currentColor" />
-        <path d="M4 21h16" stroke="currentColor" strokeLinecap="round" strokeWidth="1.6" />
-      </svg>
-    );
-  }
-
-  return (
-    <svg aria-hidden="true" className="size-4" fill="none" viewBox="0 0 24 24">
-      <path d="M12 20.5s5-5.2 5-9a5 5 0 1 0-10 0c0 3.8 5 9 5 9Z" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.6" />
-      <circle cx="12" cy="11.5" r="1.8" stroke="currentColor" strokeWidth="1.6" />
-    </svg>
-  );
-}
 
 export default function DentistasPage() {
   return (

@@ -73,7 +73,7 @@ export default function RootLayout({
           href="https://wa.me/5212221526613?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20cita"
           target="_blank"
           rel="noopener noreferrer"
-          className="whatsapp-float animate-pulse-soft"
+          className="whatsapp-float"
           aria-label="Contactar por WhatsApp"
           title="Agendar cita por WhatsApp"
         >
