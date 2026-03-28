@@ -26,6 +26,9 @@ export const metadata: Metadata = {
     "ortodoncia en Puebla",
     "Felizdent",
   ],
+  icons: {
+    icon: "/favicon.png",
+  },
   robots: {
     index: true,
     follow: true,
