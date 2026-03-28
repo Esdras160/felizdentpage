@@ -217,7 +217,7 @@ export default function Home() {
               <div className="mb-6 h-px w-12 bg-accent-purple/40" />
               <h2 className="font-headline mb-3 text-3xl font-light text-on-background">Tratamientos</h2>
               <p className="text-on-surface-variant max-w-2xl font-light">
-                Tratamientos clínicos enfocados en prevención, restauración y funcionalidad para cuidar tu salud bucal en cada etapa.
+                Contamos con tratamientos clínicos enfocados en prevención, restauración y funcionalidad para cuidar tu salud bucal en cada etapa.
               </p>
             </div>
 
