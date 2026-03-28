@@ -215,7 +215,7 @@ export default function Home() {
             <div className="reveal reveal-blur mb-14 md:mb-16">
               <span className="text-accent-purple mb-3 block text-xs font-semibold tracking-[0.3em] uppercase">Tratamientos</span>
               <div className="mb-6 h-px w-12 bg-accent-purple/40" />
-              <h2 className="font-headline mb-3 text-3xl font-light text-on-background">Procedimientos destacados</h2>
+              <h2 className="font-headline mb-3 text-3xl font-light text-on-background">Tratamientos</h2>
               <p className="text-on-surface-variant max-w-2xl font-light">
                 Tratamientos clínicos enfocados en prevención, restauración y funcionalidad para cuidar tu salud bucal en cada etapa.
               </p>
