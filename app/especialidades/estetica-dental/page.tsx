@@ -43,7 +43,7 @@ export default function EsteticaDentalPage() {
                 Combinamos ciencia clinica y diseno para armonizar tu sonrisa. Nuestros protocolos esteticos buscan resultados naturales, funcionales y personalizados.
               </p>
               <p className="text-on-surface-variant mb-5 text-base leading-relaxed font-light">
-                El 48% de las personas considera que la sonrisa es la caracteristica mas memorable al conocer a alguien, segun la Academia Americana de Odontologia Cosmetica.
+                El 48% de las personas considera que la sonrisa es la caracteristica más memorable al conocer a alguien, segun la Academia Americana de Odontologia Cosmetica.
               </p>
               <p className="text-on-surface-variant text-base leading-relaxed font-light">
                 Una sonrisa saludable no solo impacta la apariencia: la mala salud bucal puede relacionarse con afecciones sistemicas y disminuir calidad de vida.

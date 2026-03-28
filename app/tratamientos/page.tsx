@@ -1,10 +1,13 @@
-import { SiteFooter, SiteNav } from "../components/shared/SiteChrome";
+import { Icon, IconName, SiteFooter, SiteNav } from "../components/shared/SiteChrome";
 
 type Treatment = {
   title: string;
   subtitle: string;
   description: string;
-  image: string;
+  icon: IconName;
+  indication: string;
+  benefits: string[];
+  sessions: string;
 };
 
 const TREATMENTS: Treatment[] = [
@@ -12,43 +15,85 @@ const TREATMENTS: Treatment[] = [
     title: "Limpiezas Dentales",
     subtitle: "Limpiezas Dentales",
     description:
-      "Procedimiento preventivo que elimina placa bacteriana, sarro y manchas superficiales. Ayuda a prevenir caries y enfermedades periodontales.",
-    image: "/images/periodoncia.jpg",
+      "Procedimiento preventivo que elimina placa bacteriana, sarro y manchas superficiales para conservar una salud oral estable.",
+    icon: "sparkle",
+    indication: "Para adolescentes y adultos con acumulacion de placa",
+    benefits: [
+      "Reduce riesgo de caries y gingivitis",
+      "Mejora el aliento y la higiene diaria",
+      "Permite detectar problemas en etapa temprana",
+    ],
+    sessions: "1 sesion cada 6 meses",
   },
   {
     title: "Resinas Dentales",
     subtitle: "Resinas",
     description:
-      "Materiales del color del diente natural para restaurar caries, fracturas o mejorar estetica en cavidades pequenas y medianas.",
-    image: "/images/endodoncia.jpg",
+      "Restauraciones esteticas del color del diente para tratar caries, fracturas pequenas y desgaste en zonas visibles.",
+    icon: "technology",
+    indication: "Para pacientes con caries pequenas o fracturas leves",
+    benefits: [
+      "Recupera forma y funcion del diente",
+      "Resultado natural y discreto",
+      "Procedimiento conservador y rapido",
+    ],
+    sessions: "1 sesion",
   },
   {
     title: "Extracciones Dentales",
     subtitle: "Extracciones",
     description:
-      "Remocion de dientes no restaurables por caries extensa, fractura o infeccion. Tambien se indica en casos de dientes retenidos o apinamiento.",
-    image: "/images/cirugia.jpg",
+      "Remocion segura de piezas no restaurables por caries avanzada, fractura o infeccion, con enfoque en recuperacion controlada.",
+    icon: "plus",
+    indication: "Para dientes comprometidos o retenidos",
+    benefits: [
+      "Alivia dolor e inflamacion persistente",
+      "Previene infecciones mayores",
+      "Facilita tratamientos de rehabilitacion posteriores",
+    ],
+    sessions: "1 sesion + control",
   },
   {
     title: "Protesis Fijas",
     subtitle: "Protesis",
     description:
-      "Restauraciones permanentes para reemplazar dientes perdidos, cementadas o fijadas de forma segura para estabilidad funcional.",
-    image: "/images/smile-design.jpg",
+      "Rehabilitaciones permanentes para reemplazar uno o varios dientes con estructuras estables, funcionales y de apariencia natural.",
+    icon: "verified",
+    indication: "Para pacientes que buscan solucion estable a largo plazo",
+    benefits: [
+      "Mayor comodidad al masticar y hablar",
+      "Ajuste firme sin retiro diario",
+      "Mejora la armonia de la sonrisa",
+    ],
+    sessions: "2 a 4 sesiones",
   },
   {
     title: "Protesis Removibles",
     subtitle: "Protesis Removibles",
     description:
-      "Dispositivos que pueden retirarse y colocarse a voluntad para recuperar funcion masticatoria y mejorar estetica en perdida parcial o total de dientes.",
-    image: "/images/ortodoncia.jpg",
+      "Dispositivos removibles para reemplazar dientes ausentes en perdidas parciales o totales, adaptados a cada paciente.",
+    icon: "shield",
+    indication: "Para pacientes que requieren una alternativa flexible",
+    benefits: [
+      "Recupera funcion masticatoria diaria",
+      "Solucion accesible y adaptable",
+      "Permite ajustes conforme cambian las necesidades",
+    ],
+    sessions: "2 a 3 sesiones",
   },
   {
     title: "Placas Totales",
     subtitle: "Placas totales",
     description:
-      "Dentaduras completas removibles para reemplazar todos los dientes de una arcada. Elaboradas en acrilico y ajustadas a la encia del paciente.",
-    image: "/images/hero-room.jpg",
+      "Dentaduras completas removibles para reemplazar toda una arcada, elaboradas con ajuste personalizado para confort y estabilidad.",
+    icon: "smile",
+    indication: "Para personas con perdida total de dientes en una arcada",
+    benefits: [
+      "Mejora la estetica facial y la sonrisa",
+      "Facilita masticacion y fonacion",
+      "Aporta soporte y confianza al hablar",
+    ],
+    sessions: "3 a 5 sesiones",
   },
 ];
 
@@ -75,11 +120,23 @@ export default function TratamientosPage() {
               {TREATMENTS.map((item, index) => (
                 <div key={item.title} className={`treatment-row reveal ${index % 2 === 0 ? "reveal-d1" : "reveal-d2"}`}>
                   <div className="treatment-num"><span className="text-accent-purple">0{index + 1}</span></div>
+                  <div className="treatment-icon-wrap" aria-hidden="true">
+                    <Icon className="size-4" name={item.icon} />
+                  </div>
                   <div className="treatment-body">
+                    <p className="treatment-indication">{item.indication}</p>
                     <h2 className="treatment-title">{item.title}</h2>
                     <p className="treatment-desc">{item.description}</p>
+                    <ul className="treatment-benefits">
+                      {item.benefits.map((benefit) => (
+                        <li key={benefit}>{benefit}</li>
+                      ))}
+                    </ul>
                   </div>
-                  <div className="treatment-tag">{item.subtitle}</div>
+                  <div>
+                    <div className="treatment-tag">{item.subtitle}</div>
+                    <div className="treatment-session-chip">{item.sessions}</div>
+                  </div>
                 </div>
               ))}
             </div>

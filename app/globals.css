@@ -23,11 +23,7 @@
   --editorial-sand: rgba(193, 172, 132, 0.12);
 }
 
-body {
-  font-family: var(--font-body);
-  color: var(--color-on-background);
-  font-weight: 400;
-}
+/* body styles consolidated at end of file */
 
 .material-symbols-outlined {
   font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
@@ -117,6 +113,47 @@ body {
   transform: translateY(-2px);
 }
 
+/* ─── Phone floating button ─── */
+.call-float {
+  position: fixed;
+  bottom: 6rem;
+  right: 1.5rem;
+  z-index: 999;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--color-accent-purple);
+  box-shadow: 0 6px 20px rgba(138, 99, 241, 0.4);
+  transition: transform 250ms ease, box-shadow 250ms ease, background 250ms ease;
+}
+
+.call-float-label {
+  position: absolute;
+  right: calc(100% + 0.65rem);
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(24, 28, 27, 0.92);
+  color: white;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  box-shadow: 0 12px 26px rgba(12, 19, 17, 0.22);
+}
+
+.call-float:hover {
+  transform: scale(1.1);
+  background: #7450d8;
+  box-shadow: 0 8px 28px rgba(138, 99, 241, 0.5);
+}
+
 /* ─── Stats strip ─── */
 .stats-strip {
   position: relative;
@@ -148,7 +185,25 @@ body {
   box-shadow: 0 8px 28px rgba(37, 211, 102, 0.5);
 }
 
+@media (max-width: 768px) {
+  .call-float {
+    bottom: 5.6rem;
+    right: 1rem;
+    width: 52px;
+    height: 52px;
+  }
+
+  .call-float-label {
+    display: none;
+  }
+
+  .whatsapp-float {
+    right: 1rem;
+  }
+}
+
 .hero-image-wrap {
+  position: relative;
   border: 1px solid rgba(74, 155, 142, 0.18);
   box-shadow: 0 22px 44px rgba(12, 19, 17, 0.08);
 }
@@ -201,6 +256,46 @@ body {
 .reveal-d4 { transition-delay: 320ms; }
 .reveal-d5 { transition-delay: 400ms; }
 
+/* ── Scroll-reveal variants ── */
+.reveal.reveal-left {
+  transform: translateX(-32px);
+}
+.reveal.reveal-left.visible {
+  transform: translateX(0);
+}
+
+.reveal.reveal-right {
+  transform: translateX(32px);
+}
+.reveal.reveal-right.visible {
+  transform: translateX(0);
+}
+
+.reveal.reveal-scale {
+  transform: scale(0.92);
+}
+.reveal.reveal-scale.visible {
+  transform: scale(1);
+}
+
+.reveal.reveal-blur {
+  filter: blur(5px);
+  transform: translateY(14px);
+  transition: opacity 600ms ease-out, filter 600ms ease-out, transform 600ms ease-out;
+}
+.reveal.reveal-blur.visible {
+  filter: blur(0);
+}
+
+/* ── WhatsApp floating button soft pulse ── */
+@keyframes pulseSoft {
+  0%, 100% { box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4); }
+  50% { box-shadow: 0 8px 32px rgba(37, 211, 102, 0.65); }
+}
+.animate-pulse-soft {
+  animation: pulseSoft 2.5s ease-in-out infinite;
+}
+
 /* ── Card lift hover ── */
 .card-lift {
   transition: transform 300ms ease, box-shadow 300ms ease, border-color 300ms ease;
@@ -243,14 +338,83 @@ body {
   border: 1px solid rgba(138, 99, 241, 0.2);
 }
 
+.info-chip-card {
+  border: 1px solid rgba(74, 155, 142, 0.16);
+  border-radius: 1.1rem;
+  background: rgba(255, 255, 255, 0.92);
+  padding: 1rem 1.05rem;
+  box-shadow: 0 14px 30px rgba(12, 19, 17, 0.04);
+}
+
+.info-chip-head {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-on-background);
+}
+
+.info-chip-copy {
+  margin-top: 0.5rem;
+  color: var(--color-on-surface-variant);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+.mini-social-pill {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid rgba(138, 99, 241, 0.18);
+  border-radius: 999px;
+  padding: 0.45rem 0.8rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-accent-purple);
+  transition: transform 220ms ease, background 220ms ease, color 220ms ease;
+}
+
+.mini-social-pill:hover {
+  transform: translateY(-2px);
+  background: var(--color-accent-purple);
+  color: white;
+}
+
 /* ── Specialty cards with image reveal on hover ── */
 .specialty-card {
   perspective: 1000px;
+  background: transparent;
+}
+
+.specialty-base-line {
+  background: rgba(138, 99, 241, 0.7);
+  transition: width 320ms ease, opacity 320ms ease;
 }
 
 .specialty-card:hover {
-  border-color: rgba(74, 155, 142, 0.35);
-  box-shadow: 0 12px 24px rgba(16, 30, 27, 0.06);
+  border-color: rgba(74, 155, 142, 0.28);
+}
+
+.specialty-card:hover .specialty-base-line {
+  width: 2.75rem;
+  opacity: 0.6;
+}
+
+@media (max-width: 767px) {
+  .specialty-card {
+    border: 1px solid rgba(219, 227, 224, 0.6);
+    border-radius: 1rem;
+    background: #ffffff;
+  }
+
+  .specialty-overlay {
+    opacity: 1;
+  }
 }
 
 /* ── Animated underline for active nav link ── */
@@ -556,6 +720,7 @@ body {
 }
 
 .specialist-card-photo {
+  position: relative;
   width: 110px;
   height: 110px;
   border-radius: 50%;
@@ -596,6 +761,51 @@ body {
   color: var(--color-primary);
 }
 
+.about-gallery-card {
+  overflow: hidden;
+  border: 1px solid rgba(74, 155, 142, 0.14);
+  border-radius: 1.35rem;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 18px 40px rgba(10, 22, 19, 0.06);
+}
+
+.about-gallery-media img {
+  transition: transform 700ms ease;
+}
+
+.about-gallery-card:hover .about-gallery-media img {
+  transform: scale(1.04);
+}
+
+.about-gallery-body {
+  padding: 1.3rem 1.3rem 1.45rem;
+}
+
+.about-gallery-kicker {
+  display: inline-block;
+  color: var(--color-primary);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.about-gallery-title {
+  margin-top: 0.75rem;
+  font-family: var(--font-headline);
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--color-on-background);
+}
+
+.about-gallery-copy {
+  margin-top: 0.65rem;
+  color: var(--color-on-surface-variant);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
 /* ─── Editorial row (especialidades) ─── */
 .editorial-row {
   display: grid;
@@ -605,6 +815,21 @@ body {
   overflow: hidden;
   background: rgba(255, 255, 255, 0.95);
   transition: border-color 280ms ease, box-shadow 280ms ease;
+}
+
+@media (max-width: 767px) {
+  .editorial-row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .editorial-row-image {
+    order: -1;
+  }
+
+  .editorial-row-content {
+    padding: 1.5rem 1.25rem;
+  }
 }
 
 .editorial-row:hover {
@@ -627,6 +852,10 @@ body {
   .editorial-row-image {
     aspect-ratio: unset;
   }
+}
+
+.editorial-row-image iframe {
+  min-height: 220px;
 }
 
 .editorial-row-image img {
@@ -669,7 +898,7 @@ body {
 /* ─── Treatment rows ─── */
 .treatment-row {
   display: grid;
-  grid-template-columns: 3rem 1fr auto;
+  grid-template-columns: 3rem 2.5rem 1fr auto;
   align-items: start;
   gap: 1.5rem;
   padding: 1.6rem 0;
@@ -677,7 +906,8 @@ body {
 
 @media (max-width: 640px) {
   .treatment-row {
-    grid-template-columns: 2.5rem 1fr;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
   }
 }
 
@@ -722,6 +952,169 @@ body {
 
 @media (max-width: 640px) {
   .treatment-tag { display: none; }
+  .treatment-session-chip { margin-top: 0.5rem; }
+  .treatment-row > div:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ─── Treatment row enriched elements ─── */
+.treatment-icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: rgba(85, 186, 168, 0.12);
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+  .treatment-icon-wrap { display: none; }
+  .treatment-num { display: none; }
+}
+
+.treatment-indication {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-on-surface-variant);
+  margin-bottom: 0.3rem;
+}
+
+.treatment-benefits {
+  list-style: none;
+  padding: 0;
+  margin: 0.55rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.22rem;
+}
+
+.treatment-benefits li {
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: var(--color-on-surface-variant);
+  line-height: 1.5;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.treatment-benefits li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.48em;
+  width: 0.38rem;
+  height: 0.38rem;
+  border-radius: 50%;
+  background: var(--color-primary);
+  opacity: 0.7;
+}
+
+.treatment-session-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  border: 1px solid rgba(85, 186, 168, 0.28);
+  padding: 0.22rem 0.6rem;
+  border-radius: 999px;
+  white-space: nowrap;
+  margin-top: 0.4rem;
+}
+
+.treatment-card {
+  overflow: hidden;
+  border: 1px solid rgba(74, 155, 142, 0.16);
+  border-radius: 1.25rem;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 16px 38px rgba(10, 22, 19, 0.06);
+  transition: transform 280ms ease, box-shadow 280ms ease, border-color 280ms ease;
+}
+
+.treatment-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(74, 155, 142, 0.34);
+  box-shadow: 0 20px 42px rgba(10, 22, 19, 0.1);
+}
+
+.treatment-card-image-wrap {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.treatment-card-image {
+  transition: transform 700ms ease;
+}
+
+.treatment-card:hover .treatment-card-image {
+  transform: scale(1.05);
+}
+
+.treatment-card-body {
+  padding: 1.35rem 1.35rem 1.5rem;
+}
+
+.treatment-chip {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 0.35rem 0.7rem;
+  border: 1px solid rgba(74, 155, 142, 0.18);
+  background: rgba(74, 155, 142, 0.08);
+  color: var(--color-primary);
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.treatment-seq {
+  font-family: var(--font-headline);
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: rgba(138, 99, 241, 0.32);
+  line-height: 1;
+}
+
+.treatment-card-title {
+  margin-top: 1rem;
+  font-family: var(--font-headline);
+  font-size: 1.45rem;
+  font-weight: 400;
+  color: var(--color-on-background);
+}
+
+.treatment-card-copy {
+  margin-top: 0.75rem;
+  color: var(--color-on-surface-variant);
+  font-size: 0.92rem;
+  line-height: 1.65;
+  font-weight: 300;
+}
+
+.treatment-card-link {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 1rem;
+  color: var(--color-accent-purple);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.treatment-card-link:hover {
+  color: var(--color-primary);
 }
 
 /* ─── Clinic cards (consultorios) ─── */
@@ -741,19 +1134,43 @@ body {
 }
 
 .clinic-card--accent {
-  border-color: rgba(138, 99, 241, 0.22);
-  background: linear-gradient(160deg, rgba(255,255,255,0.98), rgba(246,244,255,0.9));
+  border-color: rgba(74, 155, 142, 0.22);
 }
 
 .clinic-card--accent:hover {
-  border-color: rgba(138, 99, 241, 0.42);
+  border-color: rgba(74, 155, 142, 0.4);
+}
+
+/* Main card layout with map on the right */
+.clinic-layout {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 1024px) {
+  .clinic-layout {
+    flex-direction: row;
+    min-height: 330px;
+  }
+}
+
+.clinic-main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .clinic-image-wrap {
   position: relative;
-  aspect-ratio: 16 / 8;
   overflow: hidden;
+  aspect-ratio: 16 / 9;
   border-bottom: 1px solid rgba(74, 155, 142, 0.1);
+}
+
+@media (min-width: 1024px) {
+  .clinic-image-wrap {
+    aspect-ratio: 16 / 7;
+  }
 }
 
 .clinic-image-wrap img {
@@ -784,6 +1201,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0.85rem;
+  flex: 1;
 }
 
 .clinic-name {
@@ -820,8 +1238,81 @@ body {
 
 .clinic-maps-link:hover { opacity: 0.7; }
 
+.clinic-map-embed {
+  height: 240px;
+  border-top: 1px solid rgba(74, 155, 142, 0.1);
+  overflow: hidden;
+}
+
+@media (min-width: 1024px) {
+  .clinic-map-embed--side {
+    width: 40%;
+    height: auto;
+    min-height: 100%;
+    border-top: none;
+    border-left: 1px solid rgba(74, 155, 142, 0.12);
+  }
+}
+
+.clinic-map-embed iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Puebla promo card */
+.clinic-promo-body {
+  padding: 2rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.clinic-badge--inline {
+  position: static;
+  display: inline-block;
+  background: transparent;
+  color: #3f6f67;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  padding: 0;
+  border-radius: 0;
+  backdrop-filter: none;
+  border-bottom: 1px solid rgba(74, 155, 142, 0.35);
+  padding-bottom: 0.6rem;
+  margin-bottom: 0.2rem;
+  width: fit-content;
+}
+
+.clinic-whatsapp-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.6rem;
+  width: fit-content;
+  border-radius: 999px;
+  padding: 0.8rem 1.6rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #fff;
+  background: var(--color-primary);
+  box-shadow: 0 4px 14px rgba(74, 155, 142, 0.25);
+  transition: background 250ms ease, transform 250ms ease, box-shadow 250ms ease;
+}
+
+.clinic-whatsapp-link:hover {
+  background: #3d857a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(74, 155, 142, 0.35);
+}
+
 body {
   @apply bg-surface font-body text-on-surface antialiased;
+  font-weight: 400;
 }
 
 @media (max-width: 767px) {

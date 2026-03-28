@@ -11,6 +11,7 @@ export default function ScrollAnimations() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
           }
         });
       },
@@ -20,8 +21,6 @@ export default function ScrollAnimations() {
     const revealElements = document.querySelectorAll('.reveal');
 
     revealElements.forEach((el) => {
-      // Reset visibility on route transition so newly mounted sections can animate in.
-      el.classList.remove('visible');
       observer.observe(el);
     });
 

@@ -4,7 +4,7 @@ import { SiteFooter, SiteNav } from "../../components/shared/SiteChrome";
 const TREATMENT_OPTIONS = [
   {
     title: "Ortodoncia preventiva",
-    text: "Evaluacion temprana para guiar crecimiento maxilar y detectar habitos que puedan afectar alineacion y mordida en ninos.",
+    text: "Evaluacion temprana para guiar crecimiento maxilar y detectar habitos que puedan afectar alineacion y mordida en niños.",
     image: "/images/pediatria.jpg",
   },
   {
@@ -43,10 +43,10 @@ export default function OrtodonciaPage() {
                 La Ortodoncia corrige la posicion de dientes y mordida para mejorar funcion, salud oral y estetica de manera integral.
               </p>
               <p className="text-on-surface-variant mb-5 text-base leading-relaxed font-light">
-                Atendemos ninos, adolescentes y adultos con diagnostico personalizado para definir el plan mas adecuado en cada etapa.
+                Atendemos niños, adolescentes y adultos con diagnóstico personalizado para definir el plan más adecuado en cada etapa.
               </p>
               <p className="text-on-surface-variant text-base leading-relaxed font-light">
-                El seguimiento periodico permite ajustar el tratamiento y asegurar resultados estables con una sonrisa funcional y armonica.
+                El seguimiento periódico permite ajustar el tratamiento y asegurar resultados estables con una sonrisa funcional y armónica.
               </p>
             </div>
             <div className="hero-image-wrap reveal reveal-d2 aspect-[4/5] overflow-hidden bg-surface-container">

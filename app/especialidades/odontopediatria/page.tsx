@@ -2,8 +2,8 @@ import Link from "next/link";
 import { SiteFooter, SiteNav } from "../../components/shared/SiteChrome";
 
 const FACTS = [
-  "Las visitas tempranas al odontopediatra permiten educar a ninos y padres sobre higiene bucal correcta.",
-  "Acostumbrar a los ninos a consulta desde pequenos reduce ansiedad y miedo al dentista en etapas posteriores.",
+  "Las visitas tempranas al odontopediatra permiten educar a niños y padres sobre higiene bucal correcta.",
+  "Acostumbrar a los niños a consulta desde pequenos reduce ansiedad y miedo al dentista en etapas posteriores.",
   "Los dientes de leche mantienen espacio para la erupcion correcta de dientes permanentes y favorecen la alineacion futura.",
 ];
 
@@ -29,7 +29,7 @@ export default function OdontopediatriaPage() {
               </p>
             </div>
             <div className="hero-image-wrap reveal reveal-d2 aspect-[4/5] overflow-hidden bg-surface-container">
-              <img src="/images/pediatria.jpg" alt="Nina sonriendo con dentista" className="h-full w-full object-cover" />
+              <img src="/images/especialidades/odontopediatria/odonto3.png" alt="Odontopediatria" className="h-full w-full object-cover" />
             </div>
           </div>
         </section>
@@ -38,36 +38,36 @@ export default function OdontopediatriaPage() {
           <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 px-6 md:px-8 lg:grid-cols-3">
             <article className="specialty-panel reveal">
               <div className="specialty-panel-image">
-                <img src="/images/endodoncia.jpg" alt="Dentista trabajando" className="h-full w-full object-cover" />
+                <img src="/images/especialidades/odontopediatria/odontopediatria2.jpg" alt="Dentista trabajando" className="h-full w-full object-cover" />
               </div>
               <div className="p-6">
-                <h2 className="font-headline mb-3 text-2xl font-light text-on-background">Dentista trabajando</h2>
+                <h2 className="font-headline mb-3 text-2xl font-light text-on-background">¿Qué es la Odontopediatria?</h2>
                 <p className="text-on-surface-variant text-sm leading-relaxed font-light">
-                  La Odontopediatria y la Ortodoncia infantil son ramas que cuidan la salud bucodental durante infancia y adolescencia. El cuidado inicia desde la lactancia materna y la erupcion dental.
+                  La Odontopediatria es una rama que cuida la salud bucodental durante infancia y adolescencia. El cuidado inicia desde la lactancia materna y la erupcion dental.
                 </p>
               </div>
             </article>
 
             <article className="specialty-panel reveal reveal-d2">
               <div className="specialty-panel-image">
-                <img src="/images/doctor-elena.jpg" alt="Papa con su hijo" className="h-full w-full object-cover" />
+                <img src="/images/especialidades/odontopediatria/ondontopediatria1.jpg" alt="Papa con su hijo" className="h-full w-full object-cover" />
               </div>
               <div className="p-6">
-                <h2 className="font-headline mb-3 text-2xl font-light text-on-background">Papa con su hijo</h2>
+                <h2 className="font-headline mb-3 text-2xl font-light text-on-background">Prevención de caries</h2>
                 <p className="text-on-surface-variant text-sm leading-relaxed font-light">
-                  Entre el 60% y 90% de ninos en edad escolar presentan caries, segun la OMS. Las revisiones periodicas ayudan a prevenir caries, maloclusiones y enfermedades de encias.
+                  Entre el 60% y 90% de niños en edad escolar presentan caries, según la OMS. Las revisiones periódicas ayudan a prevenir caries, maloclusiones y enfermedades de encías.
                 </p>
               </div>
             </article>
 
             <article className="specialty-panel reveal reveal-d3">
               <div className="specialty-panel-image">
-                <img src="/images/hero-room.jpg" alt="Consultorio dental" className="h-full w-full object-cover" />
+                <img src="/images/especialidades/odontopediatria/odonto3.png" alt="Consultorio dental" className="h-full w-full object-cover" />
               </div>
               <div className="p-6">
-                <h2 className="font-headline mb-3 text-2xl font-light text-on-background">Consultorio dental</h2>
+                <h2 className="font-headline mb-3 text-2xl font-light text-on-background">Importancia de las citas tempranas</h2>
                 <p className="text-on-surface-variant text-sm leading-relaxed font-light">
-                  Cada cita temprana fortalece habitos de higiene oral, mejora la relacion del nino con el consultorio y crea bases para una salud bucal estable a largo plazo.
+                  Cada cita temprana fortalece hábitos de higiene oral, mejora la relación del niño con el consultorio y crea bases para una salud bucal estable a largo plazo.
                 </p>
               </div>
             </article>

@@ -18,7 +18,7 @@ const DENTISTS: DentistProfile[] = [
   {
     name: "Dra. Blanca Rodriguez Cortez",
     role: "Cirujano Dentista",
-    specialty: "Cirugía Maxilofacial",
+    specialty: "Cirujano Dentista, Especialista en Cirugía Maxilofacial, con Maestría y Doctorado en Ciencias de la Educación y Doctorado en Salud Pública.",
     hospital: "Hospital Ángeles Puebla",
     tower: "Torre de Consultorios",
     consultorio: "745",
@@ -35,7 +35,7 @@ const DENTISTS: DentistProfile[] = [
       "Doctorado en Ciencias de la Educacion, Centro de Investigacion Cientifica, Academica y de Postgrado (2024).",
       "Doctorado en Salud Publica, Universidad Contemporanea de las Americas (Acta de examen en proceso de titulacion).",
     ],
-    image: "/images/doctor-elena.jpg",
+    image: "/images/especialistas/fotodefecto.png",
   },
   {
     name: "Dra. Maria Elena Rodriguez Alvarez",
@@ -56,7 +56,7 @@ const DENTISTS: DentistProfile[] = [
       "Junio 2015 - Diciembre 2019: Gestora de Seguro Popular, Regimen Estatal de Proteccion Social en Salud.",
       "Agosto 2021 - Junio 2022: Profesora en CESES (modalidad en linea).",
     ],
-    image: "/images/doctor-alejandro.jpg",
+    image: "/images/especialistas/fotodefecto.png",
   },
   {
     name: "Dra. Isabel Chavez",
@@ -76,12 +76,12 @@ const DENTISTS: DentistProfile[] = [
       "Diplomado de Ortopedia Maxilar con Aplicacion Clinica, BUAP Campus Tehuacan (2019-2021).",
       "Diplomado de Actualizacion en Ortopedia y Odontopediatria, Desarrollo Especializado con Nuevas Tecnicas (2021-2022).",
     ],
-    image: "/images/doctor-roberto.jpg",
+    image: "/images/especialistas/dentistaIsabel.jpg",
   },
   {
     name: "Dra. Yazmin Tellez Bautista",
     role: "Estomatología",
-    specialty: "Endodoncia",
+    specialty: "Estomatología y Especialista en Endodoncia",
     hospital: "Hospital Ángeles Clínica Londres",
     tower: "Torre Frontera 74",
     consultorio: "720",
@@ -97,7 +97,7 @@ const DENTISTS: DentistProfile[] = [
       "Diplomado en Odontologia Estetica y Restauradora, Colegio Dental del Estado de Mexico (2022).",
       "Diplomado en Cirugia Plastica Periodontal, Colegio de Actualizacion Profesional Tepeaca (2024).",
     ],
-    image: "/images/doctor-elena.jpg",
+    image: "/images/especialistas/dentistaYazmin.jpg",
   },
   {
     name: "Dra. Bricia Pascuala Lopez Lopez",
@@ -116,12 +116,12 @@ const DENTISTS: DentistProfile[] = [
       "Diplomado de Biocosmetica Dental, Colegio de Actualizacion de Tepeaca (octubre 2021-septiembre 2022).",
       "Diplomado en Prostodoncia Total, Colegio de Actualizacion de Tepeaca (noviembre 2022-junio 2023).",
     ],
-    image: "/images/doctor-alejandro.jpg",
+    image: "/images/especialistas/dentistaBricia.jpg",
   },
   {
     name: "Dr. Elio Federico Monterrosas Fuentes",
     role: "Estomatología",
-    specialty: "Ortodoncia",
+    specialty: "Estomatología y Especialista en Ortopedia",
     hospital: "Hospital Ángeles Puebla",
     tower: "Torre de Consultorios",
     consultorio: "280",
@@ -130,12 +130,12 @@ const DENTISTS: DentistProfile[] = [
       "Lic. en Estomatologia, Benemerita Universidad Autonoma de Puebla (1998-2003).",
       "Especialidad en Ortopedia, Universidad Nacional Autonoma de Mexico (2009-2011).",
     ],
-    image: "/images/doctor-roberto.jpg",
+    image: "/images/especialistas/dentistaElio.jpg",
   },
   {
     name: "Dr. Jose Angel Perez Benitez",
     role: "Estomatología",
-    specialty: "Ortodoncia y Endodoncia",
+    specialty: "Estomatología y Especialista en Ortodoncia y Endodoncia",
     hospital: "Hospital Ángeles Puebla",
     tower: "Torre de Consultorios",
     consultorio: "640",
@@ -150,12 +150,12 @@ const DENTISTS: DentistProfile[] = [
       "Especialidad en Endodoncia, Centro Mexicano en Estomatologia (2016-2018).",
       "Especialidad en Ortodoncia, Centro Universitario Interamericano del Pacifico (2019-2021).",
     ],
-    image: "/images/doctor-elena.jpg",
+    image: "/images/especialistas/dentistajoseAngel.jpg",
   },
   {
     name: "Dra. Vianey Joaquina Mateo Barrales",
     role: "Estomatología",
-    specialty: "Auxiliar Dental",
+    specialty: "Estomatología y Salud",
     hospital: "Hospital Ángeles Puebla",
     tower: "Torre de Consultorios",
     consultorio: "310",
@@ -168,7 +168,7 @@ const DENTISTS: DentistProfile[] = [
       "Servicio social en Clinica Particular Dental Dorada como auxiliar dental en diversas areas (2022-2023).",
       "Trabajo en Dental Dorada como auxiliar en endodoncia, ortodoncia, rehabilitacion, cirugia bucal y recepcion (2023-2024).",
     ],
-    image: "/images/doctor-alejandro.jpg",
+    image: "/images/especialistas/dentistaVianey.jpg",
   },
   {
     name: "Dra. Maria Guadalupe Perez Ponce",
@@ -186,12 +186,12 @@ const DENTISTS: DentistProfile[] = [
       "OPPSS en Centro de Estudios Superiores de Tepeaca.",
       "Uso de aparatologia de rayos X, profilaxis, educacion de higiene oral y restauraciones esteticas.",
     ],
-    image: "/images/doctor-roberto.jpg",
+    image: "/images/especialistas/dentistaMariaGuadalupe.jpg",
   },
   {
     name: "Dra. Aylin Zayagos Fernandez",
     role: "Estomatología",
-    specialty: "Odontología General",
+    specialty: "Lic. en Estomatología",
     hospital: "Hospital Ángeles Puebla",
     tower: "Torre de Consultorios",
     consultorio: "550",
@@ -203,12 +203,12 @@ const DENTISTS: DentistProfile[] = [
     details: [
       "Servicio social culminado en el periodo enero 2024-febrero 2025 en area de practica profesional con jornadas en diferentes comunidades.",
     ],
-    image: "/images/doctor-elena.jpg",
+    image: "/images/especialistas/dentistaAylin.jpg",
   },
   {
     name: "Dra. Salma Yenifer Rodriguez Camarillo",
     role: "Estomatología",
-    specialty: "Odontología General",
+    specialty: "Lic. en Estomatología",
     hospital: "Hospital Ángeles Puebla",
     tower: "Torre de Consultorios",
     consultorio: "620",
@@ -221,12 +221,12 @@ const DENTISTS: DentistProfile[] = [
       "Servicio social en Clinica de Estomatologia del CRS.",
       "Experiencia en cirugias periodontales y alargamiento de corona (2023-2024).",
     ],
-    image: "/images/doctor-alejandro.jpg",
+    image: "/images/especialistas/dentistaSalma.jpg",
   },
   {
     name: "Dra. Sandra Velazquez",
     role: "Estomatología",
-    specialty: "Estomatología Pediátrica",
+    specialty: "Lic. en Estomatología con especialidad en Estomatología Pediátrica",
     hospital: "Hospital Ángeles Puebla",
     tower: "Torre de Consultorios",
     consultorio: "510",
@@ -235,7 +235,12 @@ const DENTISTS: DentistProfile[] = [
       "Lic. en Estomatologia, Benemerita Universidad Autonoma de Puebla (2013-2019).",
       "Especialidad en Estomatologia Pediatrica, Hospital para el Nino Poblano (2023-2025).",
     ],
-    image: "/images/doctor-roberto.jpg",
+    detailsTitle: "Experiencia",
+    details: [
+      "Consultorio | Asistente dental (febrero 2019, 3 meses): asistir en consulta, toma de radiografias periapicales, lavado y esterilizado de instrumental.",
+      "Consultorio | Asistente dental (mayo 2019, 1 mes): asistir en consulta, lavado y esterilizado de instrumental, toma de impresiones y vaciado de modelos.",
+    ],
+    image: "/images/especialistas/dentistaSandra.jpg",
   },
 ];
 
@@ -299,7 +304,7 @@ export default function DentistasPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 items-start">
               {DENTISTS.map((dentist, index) => (
                 <article key={dentist.name} className={`dentist-card reveal ${index % 2 === 0 ? "reveal-d1" : "reveal-d2"}`}>
                   <div className="dentist-image-wrap">
@@ -309,33 +314,6 @@ export default function DentistasPage() {
                   <div className="dentist-content">
                     <h2 className="font-headline text-xl font-light text-on-background mb-1">{dentist.name}</h2>
                     <p className="text-accent-purple text-xs font-semibold tracking-widest uppercase mb-4">{dentist.specialty || dentist.role}</p>
-
-                    <div className="space-y-2.5 mb-4">
-                      {dentist.hospital && (
-                        <div className="dentist-info-row">
-                          <span className="dentist-icon" aria-hidden="true"><DentistMetaIcon type="hospital" /></span>
-                          <p className="text-on-surface-variant text-xs font-light">{dentist.hospital}</p>
-                        </div>
-                      )}
-                      {dentist.tower && (
-                        <div className="dentist-info-row">
-                          <span className="dentist-icon" aria-hidden="true"><DentistMetaIcon type="tower" /></span>
-                          <p className="text-on-surface-variant text-xs font-light">{dentist.tower}</p>
-                        </div>
-                      )}
-                      {dentist.consultorio && (
-                        <div className="dentist-info-row">
-                          <span className="dentist-icon" aria-hidden="true"><DentistMetaIcon type="room" /></span>
-                          <p className="text-on-surface-variant text-xs font-light">Consultorio: {dentist.consultorio}</p>
-                        </div>
-                      )}
-                      {dentist.address && (
-                        <div className="dentist-info-row">
-                          <span className="dentist-icon" aria-hidden="true"><DentistMetaIcon type="address" /></span>
-                          <p className="text-on-surface-variant text-xs font-light">{dentist.address}</p>
-                        </div>
-                      )}
-                    </div>
 
                     {dentist.education && dentist.education.length > 0 && (
                       <details className="dentist-details">

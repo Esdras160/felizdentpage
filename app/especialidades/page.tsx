@@ -16,7 +16,7 @@ const SPECIALTIES: Specialty[] = [
     description:
       "Prevencion, diagnostico y tratamiento dental infantil para construir sonrisas sanas desde etapas tempranas.",
     href: "/especialidades/odontopediatria",
-    image: "/images/pediatria.jpg",
+    image: "/images/especialidades/odontopediatria/odontopediatria2.jpg",
     icon: (
       <svg className="size-5" fill="none" viewBox="0 0 24 24" aria-hidden="true">
         <path d="M12 4c3.3 0 6 2.6 6 6v1.5c0 3.2-2.2 6-5.2 6.8L12 21l-.8-2.7C8.2 17.5 6 14.7 6 11.5V10c0-3.4 2.7-6 6-6Z" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
@@ -29,7 +29,7 @@ const SPECIALTIES: Specialty[] = [
     description:
       "Tratamientos de conducto con enfoque conservador para salvar piezas dentales y eliminar dolor e infeccion.",
     href: "/especialidades/endodoncia",
-    image: "/images/endodoncia.jpg",
+    image: "/images/especialidades/endodoncia/endodoncia1.jpg",
     icon: (
       <svg className="size-5" fill="none" viewBox="0 0 24 24" aria-hidden="true">
         <path d="M12 3v6M12 15v6M9 9h6v6H9z" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
@@ -40,9 +40,9 @@ const SPECIALTIES: Specialty[] = [
   {
     title: "Especialidad Cirugias",
     description:
-      "Cirugia oral con planeacion personalizada y tecnologia para procedimientos mas precisos y seguros.",
+      "Cirugia oral con planeacion personalizada y tecnologia para procedimientos más precisos y seguros.",
     href: "/especialidades/cirugias",
-    image: "/images/cirugia.jpg",
+    image: "/images/especialidades/cirugias/cirugias1.jpg",
     icon: (
       <svg className="size-5" fill="none" viewBox="0 0 24 24" aria-hidden="true">
         <path d="M7 7l10 10M17 7l-4.5 4.5M10 14l-3 3" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
@@ -53,9 +53,9 @@ const SPECIALTIES: Specialty[] = [
   {
     title: "Especialidad Ortodoncia",
     description:
-      "Correccion de alineacion y mordida en ninos, adolescentes y adultos con protocolos actuales.",
+      "Correccion de alineacion y mordida en niños, adolescentes y adultos con protocolos actuales.",
     href: "/especialidades/ortodoncia",
-    image: "/images/ortodoncia.jpg",
+    image: "/images/especialidades/ortodoncia/ortodoncia.jpg",
     icon: (
       <svg className="size-5" fill="none" viewBox="0 0 24 24" aria-hidden="true">
         <path d="M4 12h16" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
@@ -68,7 +68,7 @@ const SPECIALTIES: Specialty[] = [
     description:
       "Diseno de sonrisa, blanqueamientos y tratamientos esteticos para armonia dental y facial.",
     href: "/especialidades/estetica-dental",
-    image: "/images/smile-design.jpg",
+    image: "/images/especialidades/estetica/estetica1.jpg",
     icon: (
       <svg className="size-5" fill="none" viewBox="0 0 24 24" aria-hidden="true">
         <path d="M12 4v4M12 16v4M4 12h4M16 12h4" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
@@ -81,7 +81,7 @@ const SPECIALTIES: Specialty[] = [
     description:
       "Cuidado especializado de encias para prevenir gingivitis y periodontitis y mantener soporte dental saludable.",
     href: "/especialidades/periodoncia",
-    image: "/images/periodoncia.jpg",
+    image: "/images/especialidades/periodoncia/periodoncia1.png",
     icon: (
       <svg className="size-5" fill="none" viewBox="0 0 24 24" aria-hidden="true">
         <path d="M6.5 12.5c0-3 2.4-5.5 5.5-5.5 3 0 5.5 2.4 5.5 5.5" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
