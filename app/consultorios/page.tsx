@@ -1,6 +1,9 @@
 import { SiteFooter, SiteNav } from "../components/shared/SiteChrome";
 
+type ClinicId = "san-lorenzo" | "tecamachalco" | "los-reyes" | "puebla";
+
 type Clinic = {
+  id: ClinicId;
   name: string;
   address: string;
   phone: string;
@@ -11,8 +14,16 @@ type Clinic = {
   image: string;
 };
 
+type ClinicReview = {
+  patientName: string;
+  rating: number;
+  quote: string;
+  googleUrl: string;
+};
+
 const CLINICS: Clinic[] = [
   {
+    id: "san-lorenzo",
     name: "Felizdent clínica dental San Lorenzo Ometepec",
     address: "Av. Reforma 153, Barrio de Jesus, 75615 San Lorenzo Ometepec, Pue.",
     phone: "+52 1 222 152 6613",
@@ -23,6 +34,7 @@ const CLINICS: Clinic[] = [
     image: "/images/consultorios/consultorioSanLorenzo.jpg",
   },
   {
+    id: "tecamachalco",
     name: "Felizdent clínica dental Tecamachalco",
     address: "C. 13 Ote. 206, San Nicolas, 75486 Tecamachalco, Pue.",
     phone: "+52 1 249 243 6544",
@@ -33,16 +45,18 @@ const CLINICS: Clinic[] = [
     image: "/images/consultorios/consultorioTecamachalco.jpg",
   },
   {
+    id: "los-reyes",
     name: "Felizdent clínica dental Los Reyes de Juarez",
     address: "Leona Vicario 60, El Alto, 75400 Los Reyes de Juarez, Pue.",
     phone: "+52 1 222 139 7322",
     mapsUrl:
-      "https://maps.google.com/?q=Leona+Vicario+60,+El+Alto,+75400+Los+Reyes+de+Juárez,+Pue.",
+      "https://www.google.com/maps/place/Cl%C3%ADnica+Dental+Felizdent/@18.942381,-97.961554,15z",
     mapEmbed:
-      "https://www.google.com/maps?q=Avenida+Hidalgo+210,+Los+Reyes+de+Juárez,+Puebla&output=embed",
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1886.8206520351546!2d-97.8125888706612!3d18.94726468904249!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cf8a399fcf7fbf%3A0xbf9b30dfe708a843!2sCl%C3%ADnica%20Dental%20Felizdent!5e0!3m2!1ses-419!2smx!4v1774761028298!5m2!1ses-419!2smx",
     image: "/images/consultorios/consultorioLosReyes.jpg",
   },
   {
+    id: "puebla",
     name: "Consulta a Previa Cita en Puebla",
     address: "Leona Vicario 60, El Alto, 75400 Los Reyes de Juarez, Pue.",
     phone: "+52 1 249 112 9401",
@@ -54,6 +68,52 @@ const CLINICS: Clinic[] = [
     image: "/images/consultorios/consultorioLosReyes.jpg",
   },
 ];
+
+const CLINIC_REVIEWS: Record<ClinicId, ClinicReview[]> = {
+  "san-lorenzo": [
+    {
+      patientName: "Karla Mendez Garcia",
+      rating: 5,
+      quote: "El tratamiento que te brindan es muy bueno y de excelente calidad, su atención es muy buena, cualquier duda o aclaración te lo resuelven. Hablo de mi experiencia con los brackets, hasta ahorita sí he notado cambios. La recomiendo, si tienen algún problema con sus dientitos no duden en venir ✨",
+      googleUrl: "https://maps.google.com/?cid=14045817837297807375",
+    },
+    {
+      patientName: "Joice Herrera",
+      rating: 5,
+      quote: "Excelente atención, muy recomendable. Llevo años asistiendo a consultas, siempre todos muy amables y una atención de calidad por parte de la Doctora Yazmín.",
+      googleUrl: "https://maps.google.com/?cid=14045817837297807375",
+    },
+  ],
+  tecamachalco: [
+    {
+      patientName: "Nuvia Reynoso",
+      rating: 5,
+      quote: "Muy buena atención y buen trabajo, recomiendo mucho a la doctora Yasmyn, un gran ser humano, ¡gracias por su servicio!",
+      googleUrl: "https://maps.google.com/?cid=12041448620409079603",
+    },
+    {
+      patientName: "Delfina Rodriguez",
+      rating: 5,
+      quote: "Muy pacientes y accesibles las doctoras. Me gusta la atención y sobre todo que entre el mismo personal se ayudan y dan soporte unos a otros. Pido no cambien su trato y hagan más publicidad para que más gente los identifique.",
+      googleUrl: "https://maps.google.com/?cid=12041448620409079603",
+    },
+  ],
+  "los-reyes": [
+    {
+      patientName: "Yoss Morales",
+      rating: 5,
+      quote: "Excelente atención y profesionalismo. Desde el momento en que llegué, el personal fue muy amable y me explicó cada paso del tratamiento con claridad. Las instalaciones están limpias y modernas, lo que me dio mucha confianza.",
+      googleUrl: "https://www.google.com/maps/place/Cl%C3%ADnica+Dental+Felizdent/@18.94726,-97.81259,17z",
+    },
+    {
+      patientName: "Jazmin Gonzalez",
+      rating: 5,
+      quote: "Excelente calidad y atención al cliente, los doctores muy amables y profesionales, se los súper recomiendo.",
+      googleUrl: "https://www.google.com/maps/place/Cl%C3%ADnica+Dental+Felizdent/@18.94726,-97.81259,17z",
+    },
+  ],
+  puebla: [],
+};
 
 function MapPinIcon() {
   return (
@@ -77,6 +137,52 @@ function ExternalLinkIcon() {
     <svg className="inline-block shrink-0" fill="none" viewBox="0 0 24 24" width="14" height="14">
       <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" />
     </svg>
+  );
+}
+
+function ClinicReviews({ clinicId }: { clinicId: ClinicId }) {
+  const reviews = CLINIC_REVIEWS[clinicId];
+
+  return (
+    <div className="mt-6 border-outline/25 border-t pt-4">
+      <p className="text-accent-purple text-[10px] font-semibold tracking-[0.2em] uppercase">Reseñas de pacientes</p>
+
+      {reviews.length > 0 ? (
+        <div className="mt-3 space-y-3">
+          {reviews.map((review) => (
+            <article key={`${clinicId}-${review.patientName}`} className="rounded-xl border border-outline/30 bg-white/80 px-3 py-3">
+              <div className="flex items-center justify-between gap-3">
+                <p className="text-on-background text-xs font-semibold tracking-[0.08em] uppercase">{review.patientName}</p>
+                <span className="text-primary text-xs font-semibold">{review.rating.toFixed(1)}★</span>
+              </div>
+              <p className="text-on-surface-variant mt-2 text-sm leading-relaxed font-light">{review.quote}</p>
+              <a
+                href={review.googleUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-accent-purple mt-2 inline-flex items-center gap-1 text-[10px] font-semibold tracking-[0.15em] uppercase transition-opacity hover:opacity-80"
+              >
+                Ver en Google
+                <ExternalLinkIcon />
+              </a>
+            </article>
+          ))}
+        </div>
+      ) : (
+        <div className="mt-3 rounded-xl border border-outline/25 bg-white/70 px-3 py-3">
+          <p className="text-on-surface-variant text-sm leading-relaxed font-light">Estamos reuniendo opiniones para esta sede.</p>
+          <a
+            href="https://www.google.com/maps"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-accent-purple mt-2 inline-flex items-center gap-1 text-[10px] font-semibold tracking-[0.15em] uppercase transition-opacity hover:opacity-80"
+          >
+            Ver en Google
+            <ExternalLinkIcon />
+          </a>
+        </div>
+      )}
+    </div>
   );
 }
 
@@ -106,30 +212,24 @@ export default function ConsultoriosPage() {
                   className={`clinic-card reveal ${index === 0 ? "reveal-d1" : index === 1 ? "reveal-d2" : index === 2 ? "reveal-d3" : "reveal-d4"} ${clinic.isAppointmentOnly ? "clinic-card--accent" : ""}`}
                 >
                   {clinic.isAppointmentOnly ? (
-                    <div className="clinic-promo-body">
-                      <div className="clinic-badge clinic-badge--inline">Previa Cita</div>
-                      <h2 className="clinic-name">Ciudad de Puebla "Cita previa"</h2>
-
-                      <div className="clinic-detail">
+                    <div className="flex flex-wrap items-center justify-between gap-6 px-6 py-5">
+                      <div className="flex items-center gap-5">
+                        <div>
+                          <span className="text-accent-purple text-[9px] font-bold tracking-[0.28em] uppercase">Previa cita · Puebla</span>
+                          <p className="mt-0.5 text-sm font-medium text-on-background">Ciudad de Puebla</p>
+                          <a
+                            href={`tel:${clinic.phone.replace(/\s/g, "")}`}
+                            className="text-on-surface-variant mt-0.5 block text-xs font-light transition-colors hover:text-primary"
+                          >
+                            {clinic.phone}
+                          </a>
+                        </div>
                       </div>
-
-                      <div className="clinic-detail">
-                        <span className="clinic-icon text-primary">
-                          <PhoneIcon />
-                        </span>
-                        <a
-                          href={`tel:${clinic.phone.replace(/\s/g, "")}`}
-                          className="text-on-surface text-sm font-medium hover:text-primary transition-colors"
-                        >
-                          {clinic.phone}
-                        </a>
-                      </div>
-
                       <a
                         href="https://wa.me/5212491129401?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20consulta%20en%20Puebla"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="clinic-whatsapp-link"
+                        className="inline-flex items-center gap-2 rounded-full border border-primary/40 px-5 py-2 text-[10px] font-bold tracking-[0.18em] uppercase text-primary transition-opacity hover:opacity-75 whitespace-nowrap"
                       >
                         Agendar por WhatsApp
                       </a>
@@ -178,6 +278,8 @@ export default function ConsultoriosPage() {
                             <span>Ver en Google Maps</span>
                             <ExternalLinkIcon />
                           </a>
+
+                          <ClinicReviews clinicId={clinic.id} />
                         </div>
                       </div>
 

@@ -20,6 +20,7 @@ export type IconName =
   | "location"
   | "arrow"
   | "plus"
+  | "star"
   | "sparkle"
   | "shield"
   | "smile";
@@ -129,6 +130,12 @@ export function Icon({ name, className = "" }: { name: IconName; className?: str
       return (
         <svg aria-hidden="true" className={baseClassName} fill="none" viewBox="0 0 24 24">
           <path d="M12 5v14M5 12h14" stroke="currentColor" strokeLinecap="round" strokeWidth="1.8" />
+        </svg>
+      );
+    case "star":
+      return (
+        <svg aria-hidden="true" className={baseClassName} fill="currentColor" viewBox="0 0 24 24">
+          <path d="m12 3.8 2.55 5.17 5.7.83-4.12 4.01.97 5.67L12 16.89l-5.1 2.68.98-5.67-4.13-4.01 5.71-.83L12 3.8Z" />
         </svg>
       );
     case "sparkle":

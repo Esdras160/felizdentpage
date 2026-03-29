@@ -117,68 +117,18 @@ export default function Home() {
                   <Icon className="size-5 text-accent-purple" name="technology" />
                   Materiales de última generación
                 </span>
+                <span className="flex items-center gap-2">
+                  <Icon className="size-5 text-primary" name="star" />
+                  Nuestros pacientes nos califican con 4.9 estrellas en Google
+                </span>
               </div>
-              <div className="mt-10 flex flex-wrap items-center gap-4">
-                <a
-                  href="https://wa.me/5212221526613?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20cita"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="cta-button"
-                >
-                  Agendar cita
-                </a>
-                <a href="/consultorios" className="cta-button-outline">
-                  Nuestras sedes
-                </a>
-              </div>
-              <div className="mt-8 max-w-xl overflow-hidden rounded-2xl border border-outline/30 bg-white shadow-sm">
-                <div className="flex flex-col sm:flex-row sm:items-stretch">
-                  {/* Bloque horario */}
-                  <div className="flex flex-1 items-center gap-3 px-5 py-4">
-                    <div className="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary/10">
-                      <Icon className="size-5 text-primary" name="clock" />
-                    </div>
-                    <div>
-                      <p className="mb-1 text-[10px] font-semibold tracking-[0.2em] uppercase text-primary">
-                        Horarios de atención
-                      </p>
-                      <p className="text-xs leading-relaxed text-on-surface-variant">Lunes a viernes: 9am – 7pm</p>
-                      <p className="text-xs leading-relaxed text-on-surface-variant">Sábados: 9am – 2pm</p>
-                    </div>
-                  </div>
-                  {/* Separador */}
-                  <div className="mx-5 h-px bg-outline/20 sm:mx-0 sm:my-3 sm:h-auto sm:w-px" />
-                  {/* Bloque redes sociales */}
-                  <div className="flex flex-1 items-center justify-between gap-4 px-5 py-4">
-                    <div>
-                      <p className="mb-1 text-[10px] font-semibold tracking-[0.2em] uppercase text-accent-purple">
-                        Encuéntranos como
-                      </p>
-                      <p className="text-sm font-medium text-on-background">Felizdent</p>
-                    </div>
-                    <div className="flex gap-2">
-                      <a
-                        href="https://www.instagram.com/clinicadentalfelizdent?igsh=MTJiNzMya2VwaWpscQ=="
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="Instagram de Felizdent"
-                        className="flex size-9 items-center justify-center rounded-full bg-primary transition-opacity hover:opacity-80"
-                      >
-                        <Icon className="size-4 text-white" name="instagram" />
-                      </a>
-                      <a
-                        href="https://www.facebook.com/share/17tgSemThC/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="Facebook de Felizdent"
-                        className="flex size-9 items-center justify-center rounded-full bg-accent-purple transition-opacity hover:opacity-80"
-                      >
-                        <Icon className="size-4 text-white" name="facebook" />
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <a
+                href="/consultorios"
+                className="text-accent-purple mt-4 inline-flex items-center gap-2 text-xs font-medium tracking-[0.15em] uppercase transition-opacity hover:opacity-80"
+              >
+                <Icon className="size-4" name="arrow" />
+                Conoce nuestras sucursales
+              </a>
             </div>
             <div className="relative animate-in-up-delay">
               <div className="hero-image-wrap bg-surface-container aspect-[4/5] overflow-hidden">
@@ -215,7 +165,7 @@ export default function Home() {
             <div className="reveal reveal-blur mb-14 md:mb-16">
               <span className="text-accent-purple mb-3 block text-xs font-semibold tracking-[0.3em] uppercase">Tratamientos</span>
               <div className="mb-6 h-px w-12 bg-accent-purple/40" />
-              <h2 className="font-headline mb-3 text-3xl font-light text-on-background">Tratamientos</h2>
+              <h2 className="font-headline mb-3 text-3xl font-light text-on-background">Conoce nuestros tratamientos</h2>
               <p className="text-on-surface-variant max-w-2xl font-light">
                 Contamos con tratamientos clínicos enfocados en prevención, restauración y funcionalidad para cuidar tu salud bucal en cada etapa.
               </p>
@@ -373,7 +323,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="section-frame border-outline/30 border-t bg-white/80 py-20 md:py-24">
+        <section id="sucursales" className="section-frame border-outline/30 border-t bg-white/80 py-20 md:py-24">
           <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 px-6 md:px-8 lg:grid-cols-[1.2fr_0.8fr]">
             <div className="reveal reveal-left">
               <span className="text-primary mb-3 block text-xs font-semibold tracking-[0.3em] uppercase">Sucursal San Lorenzo</span>
@@ -385,16 +335,50 @@ export default function Home() {
               <p className="text-on-surface-variant mb-8 max-w-xl text-sm leading-relaxed font-light">
                 Visítanos en nuestra sucursal de San Lorenzo y conoce también el resto de nuestras ubicaciones.
               </p>
-              <div className="mb-8 grid max-w-xl gap-4 sm:grid-cols-2">
-                <div className="info-chip-card">
-                  <div className="info-chip-head">
-                    <Icon className="size-4 text-primary" name="clock" />
-                    Horario
+              <div className="mb-8 max-w-xl overflow-hidden rounded-2xl border border-outline/30 bg-white shadow-sm">
+                <div className="flex flex-col sm:flex-row sm:items-stretch">
+                  <div className="flex flex-1 items-center gap-3 px-5 py-4">
+                    <div className="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary/10">
+                      <Icon className="size-5 text-primary" name="clock" />
+                    </div>
+                    <div>
+                      <p className="mb-1 text-[10px] font-semibold tracking-[0.2em] uppercase text-primary">
+                        Horarios de atención
+                      </p>
+                      <p className="text-xs leading-relaxed text-on-surface-variant">Lunes a viernes: 9am – 7pm</p>
+                      <p className="text-xs leading-relaxed text-on-surface-variant">Sábados: 9am – 2pm</p>
+                    </div>
                   </div>
-                  <p className="info-chip-copy">Lunes a Viernes : 9am a 7pm</p>
-                  <p className="info-chip-copy">Sábados: 9am a 2pm</p>
+                  <div className="mx-5 h-px bg-outline/20 sm:mx-0 sm:my-3 sm:h-auto sm:w-px" />
+                  <div className="flex flex-1 items-center justify-between gap-4 px-5 py-4">
+                    <div>
+                      <p className="mb-1 text-[10px] font-semibold tracking-[0.2em] uppercase text-accent-purple">
+                        Encuéntranos como
+                      </p>
+                      <p className="text-sm font-medium text-on-background">Felizdent</p>
+                    </div>
+                    <div className="flex gap-2">
+                      <a
+                        href="https://www.instagram.com/clinicadentalfelizdent?igsh=MTJiNzMya2VwaWpscQ=="
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Instagram de Felizdent"
+                        className="flex size-9 items-center justify-center rounded-full bg-primary transition-opacity hover:opacity-80"
+                      >
+                        <Icon className="size-4 text-white" name="instagram" />
+                      </a>
+                      <a
+                        href="https://www.facebook.com/share/17tgSemThC/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Facebook de Felizdent"
+                        className="flex size-9 items-center justify-center rounded-full bg-accent-purple transition-opacity hover:opacity-80"
+                      >
+                        <Icon className="size-4 text-white" name="facebook" />
+                      </a>
+                    </div>
+                  </div>
                 </div>
-          
               </div>
               <div className="flex flex-wrap items-center gap-4">
                 <a
