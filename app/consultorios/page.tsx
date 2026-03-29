@@ -25,7 +25,7 @@ const CLINICS: Clinic[] = [
   {
     id: "san-lorenzo",
     name: "Felizdent clínica dental San Lorenzo Ometepec",
-    address: "Av. Reforma 153, Barrio de Jesus, 75615 San Lorenzo Ometepec, Pue.",
+    address: "Av. Reforma 153, Barrio de Jesús, 75615 San Lorenzo Ometepec, Pue.",
     phone: "+52 1 222 152 6613",
     mapsUrl:
       "https://maps.google.com/?q=Av.+Reforma+153,+Barrio+de+Jesús,+75615+San+Lorenzo+Ometepec,+Pue.",
@@ -36,7 +36,7 @@ const CLINICS: Clinic[] = [
   {
     id: "tecamachalco",
     name: "Felizdent clínica dental Tecamachalco",
-    address: "C. 13 Ote. 206, San Nicolas, 75486 Tecamachalco, Pue.",
+    address: "C. 13 Ote. 206, San Nicolás, 75486 Tecamachalco, Pue.",
     phone: "+52 1 249 243 6544",
     mapsUrl:
       "https://maps.google.com/?q=C.+13+Ote.+206,+San+Nicolás,+75486+Tecamachalco,+Pue.",
@@ -46,8 +46,8 @@ const CLINICS: Clinic[] = [
   },
   {
     id: "los-reyes",
-    name: "Felizdent clínica dental Los Reyes de Juarez",
-    address: "Leona Vicario 60, El Alto, 75400 Los Reyes de Juarez, Pue.",
+    name: "Felizdent clínica dental Los Reyes de Juárez",
+    address: "Leona Vicario 60, El Alto, 75400 Los Reyes de Juárez, Pue.",
     phone: "+52 1 222 139 7322",
     mapsUrl:
       "https://www.google.com/maps/place/Cl%C3%ADnica+Dental+Felizdent/@18.942381,-97.961554,15z",
@@ -57,14 +57,14 @@ const CLINICS: Clinic[] = [
   },
   {
     id: "puebla",
-    name: "Consulta a Previa Cita en Puebla",
-    address: "Leona Vicario 60, El Alto, 75400 Los Reyes de Juarez, Pue.",
+    name: "Consulta previa con cita en Puebla",
+    address: "Leona Vicario 60, El Alto, 75400 Los Reyes de Juárez, Pue.",
     phone: "+52 1 249 112 9401",
     mapsUrl: "https://maps.google.com/?q=Leona+Vicario+60,+El+Alto,+75400+Los+Reyes+de+Juárez,+Pue.",
     mapEmbed:
       "https://www.google.com/maps?q=Avenida+Hidalgo+210,+Los+Reyes+de+Juárez,+Puebla&output=embed",
     isAppointmentOnly: true,
-    note: "Comunicate:",
+    note: "Comunícate:",
     image: "/images/consultorios/consultorioLosReyes.jpg",
   },
 ];
@@ -240,7 +240,7 @@ export default function ConsultoriosPage() {
                         <div className="clinic-image-wrap">
                           <img
                             src={clinic.image}
-                            alt={`Imagen de la clinica ${clinic.name}`}
+                            alt={`Imagen de la clínica ${clinic.name}`}
                             className="h-full w-full object-cover"
                           />
                         </div>
@@ -308,7 +308,7 @@ export default function ConsultoriosPage() {
             <div className="reveal text-center">
               <h2 className="font-headline mb-4 text-2xl font-light text-on-background md:text-3xl">¿Necesitas una cita?</h2>
               <p className="text-on-surface-variant mx-auto mb-8 max-w-md text-sm font-light leading-relaxed">
-                Comunicate con nosotros por WhatsApp y agenda tu consulta en la sucursal más cercana.
+                Comunícate con nosotros por WhatsApp y agenda tu consulta en la sucursal más cercana.
               </p>
               <a
                 href="https://wa.me/5212221526613?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20cita"

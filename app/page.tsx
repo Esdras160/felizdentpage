@@ -124,7 +124,7 @@ export default function Home() {
               </div>
               <a
                 href="/consultorios"
-                className="text-accent-purple mt-4 inline-flex items-center gap-2 text-xs font-medium tracking-[0.15em] uppercase transition-opacity hover:opacity-80"
+                className="text-on-background mt-4 inline-flex items-center gap-2 text-xs font-medium tracking-[0.15em] uppercase transition-opacity hover:opacity-80"
               >
                 <Icon className="size-4" name="arrow" />
                 Conoce nuestras sucursales
@@ -326,7 +326,7 @@ export default function Home() {
         <section id="sucursales" className="section-frame border-outline/30 border-t bg-white/80 py-20 md:py-24">
           <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 px-6 md:px-8 lg:grid-cols-[1.2fr_0.8fr]">
             <div className="reveal reveal-left">
-              <span className="text-primary mb-3 block text-xs font-semibold tracking-[0.3em] uppercase">Sucursal San Lorenzo</span>
+              <span className="text-primary mb-3 block text-xs font-semibold tracking-[0.3em] uppercase">Sucursales</span>
               <div className="mb-6 h-px w-12 bg-primary/40" />
               <h2 className="font-headline mb-4 text-3xl font-light text-on-background md:text-4xl">San Lorenzo Ometepec</h2>
               <p className="text-on-surface-variant mb-4 max-w-xl text-base leading-relaxed font-light">
@@ -353,7 +353,7 @@ export default function Home() {
                   <div className="flex flex-1 items-center justify-between gap-4 px-5 py-4">
                     <div>
                       <p className="mb-1 text-[10px] font-semibold tracking-[0.2em] uppercase text-accent-purple">
-                        Encuéntranos como
+                        Encuéntranos en nuestras redes como
                       </p>
                       <p className="text-sm font-medium text-on-background">Felizdent</p>
                     </div>

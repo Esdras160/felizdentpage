@@ -4,17 +4,17 @@ import { SiteFooter, SiteNav } from "../../components/shared/SiteChrome";
 const TREATMENTS = [
   {
     title: "Blanqueamiento Dental",
-    text: "Procedimiento estetico para aclarar el color de los dientes y reducir manchas por cafe, vino, te, tabaco o envejecimiento natural.",
+    text: "Procedimiento estético para aclarar el color de los dientes y reducir manchas por café, vino, té, tabaco o envejecimiento natural.",
     image: "/images/smile-design.jpg",
   },
   {
-    title: "Diseno de Sonrisa Digital",
-    text: "Tecnica avanzada que planifica y visualiza resultados antes del tratamiento, considerando forma, tamano, posicion dental y armonia facial.",
+    title: "Diseño de Sonrisa Digital",
+    text: "Técnica avanzada que planifica y visualiza resultados antes del tratamiento, considerando forma, tamaño, posición dental y armonía facial.",
     image: "/images/ortodoncia.jpg",
   },
   {
     title: "Carillas",
-    text: "Laminas finas de porcelana o resina que se adhieren al frente del diente para mejorar color, forma y proporcion de la sonrisa.",
+    text: "Láminas finas de porcelana o resina que se adhieren al frente del diente para mejorar color, forma y proporción de la sonrisa.",
     image: "/images/pediatria.jpg",
   },
 ];
@@ -22,7 +22,7 @@ const TREATMENTS = [
 const VENEER_CASES = [
   "Manchas o decoloraciones que no responden al blanqueamiento.",
   "Dientes desgastados por el paso del tiempo o por uso.",
-  "Dientes desiguales o desalineados cuando se busca una solucion estetica conservadora.",
+  "Dientes desiguales o desalineados cuando se busca una solución estética conservadora.",
 ];
 
 export default function EsteticaDentalPage() {
@@ -37,16 +37,16 @@ export default function EsteticaDentalPage() {
               <div className="eyebrow mb-4 text-[11px] font-semibold uppercase">Especialidad</div>
               <div className="mb-8 h-px w-12 bg-accent-purple/50" />
               <h1 className="font-headline mb-6 text-4xl leading-tight font-light text-on-background md:text-5xl">
-                Estetica Dental
+                Estética Dental
               </h1>
               <p className="text-on-surface-variant mb-5 text-base leading-relaxed font-light">
-                Combinamos ciencia clinica y diseno para armonizar tu sonrisa. Nuestros protocolos esteticos buscan resultados naturales, funcionales y personalizados.
+                Combinamos ciencia clínica y diseño para armonizar tu sonrisa. Nuestros protocolos estéticos buscan resultados naturales, funcionales y personalizados.
               </p>
               <p className="text-on-surface-variant mb-5 text-base leading-relaxed font-light">
-                El 48% de las personas considera que la sonrisa es la caracteristica más memorable al conocer a alguien, segun la Academia Americana de Odontologia Cosmetica.
+                El 48% de las personas considera que la sonrisa es la característica más memorable al conocer a alguien, según la Academia Americana de Odontología Cosmética.
               </p>
               <p className="text-on-surface-variant text-base leading-relaxed font-light">
-                Una sonrisa saludable no solo impacta la apariencia: la mala salud bucal puede relacionarse con afecciones sistemicas y disminuir calidad de vida.
+                Una sonrisa saludable no solo impacta la apariencia: la mala salud bucal puede relacionarse con afecciones sistémicas y disminuir la calidad de vida.
               </p>
             </div>
             <div className="hero-image-wrap reveal reveal-d2 aspect-[4/5] overflow-hidden bg-surface-container">
@@ -81,7 +81,7 @@ export default function EsteticaDentalPage() {
         <section className="section-frame bg-surface-container/40 py-20 md:py-24">
           <div className="mx-auto max-w-6xl px-6 md:px-8">
             <article className="reveal rounded-2xl border border-outline/60 bg-white p-7 md:p-9">
-              <h2 className="font-headline mb-4 text-3xl font-light text-on-background">Cuando son necesarias las carillas dentales?</h2>
+              <h2 className="font-headline mb-4 text-3xl font-light text-on-background">¿Cuándo son necesarias las carillas dentales?</h2>
               <div className="space-y-3">
                 {VENEER_CASES.map((caseItem) => (
                   <p key={caseItem} className="text-on-surface-variant text-sm leading-relaxed font-light">

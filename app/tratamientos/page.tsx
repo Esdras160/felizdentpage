@@ -17,66 +17,66 @@ const TREATMENTS: Treatment[] = [
     description:
       "Procedimiento preventivo que elimina placa bacteriana, sarro y manchas superficiales para conservar una salud oral estable.",
     icon: "sparkle",
-    indication: "Para adolescentes y adultos con acumulacion de placa",
+    indication: "Para adolescentes y adultos con acumulación de placa",
     benefits: [
       "Reduce riesgo de caries y gingivitis",
       "Mejora el aliento y la higiene diaria",
       "Permite detectar problemas en etapa temprana",
     ],
-    sessions: "1 sesion cada 6 meses",
+    sessions: "1 sesión cada 6 meses",
   },
   {
     title: "Resinas Dentales",
     subtitle: "Resinas",
     description:
-      "Restauraciones esteticas del color del diente para tratar caries, fracturas pequenas y desgaste en zonas visibles.",
+      "Restauraciones estéticas del color del diente para tratar caries, fracturas pequeñas y desgaste en zonas visibles.",
     icon: "technology",
-    indication: "Para pacientes con caries pequenas o fracturas leves",
+    indication: "Para pacientes con caries pequeñas o fracturas leves",
     benefits: [
-      "Recupera forma y funcion del diente",
+      "Recupera forma y función del diente",
       "Resultado natural y discreto",
-      "Procedimiento conservador y rapido",
+      "Procedimiento conservador y rápido",
     ],
-    sessions: "1 sesion",
+    sessions: "1 sesión",
   },
   {
     title: "Extracciones Dentales",
     subtitle: "Extracciones",
     description:
-      "Remocion segura de piezas no restaurables por caries avanzada, fractura o infeccion, con enfoque en recuperacion controlada.",
+      "Remoción segura de piezas no restaurables por caries avanzada, fractura o infección, con enfoque en recuperación controlada.",
     icon: "plus",
     indication: "Para dientes comprometidos o retenidos",
     benefits: [
       "Alivia dolor e inflamacion persistente",
       "Previene infecciones mayores",
-      "Facilita tratamientos de rehabilitacion posteriores",
+      "Facilita tratamientos de rehabilitación posteriores",
     ],
-    sessions: "1 sesion + control",
+    sessions: "1 sesión + control",
   },
   {
-    title: "Protesis Fijas",
-    subtitle: "Protesis",
+    title: "Prótesis Fijas",
+    subtitle: "Prótesis",
     description:
       "Rehabilitaciones permanentes para reemplazar uno o varios dientes con estructuras estables, funcionales y de apariencia natural.",
     icon: "verified",
-    indication: "Para pacientes que buscan solucion estable a largo plazo",
+    indication: "Para pacientes que buscan solución estable a largo plazo",
     benefits: [
       "Mayor comodidad al masticar y hablar",
       "Ajuste firme sin retiro diario",
-      "Mejora la armonia de la sonrisa",
+      "Mejora la armonía de la sonrisa",
     ],
     sessions: "2 a 4 sesiones",
   },
   {
-    title: "Protesis Removibles",
-    subtitle: "Protesis Removibles",
+    title: "Prótesis Removibles",
+    subtitle: "Prótesis Removibles",
     description:
-      "Dispositivos removibles para reemplazar dientes ausentes en perdidas parciales o totales, adaptados a cada paciente.",
+      "Dispositivos removibles para reemplazar dientes ausentes en pérdidas parciales o totales, adaptados a cada paciente.",
     icon: "shield",
     indication: "Para pacientes que requieren una alternativa flexible",
     benefits: [
-      "Recupera funcion masticatoria diaria",
-      "Solucion accesible y adaptable",
+      "Recupera función masticatoria diaria",
+      "Solución accesible y adaptable",
       "Permite ajustes conforme cambian las necesidades",
     ],
     sessions: "2 a 3 sesiones",
@@ -87,10 +87,10 @@ const TREATMENTS: Treatment[] = [
     description:
       "Dentaduras completas removibles para reemplazar toda una arcada, elaboradas con ajuste personalizado para confort y estabilidad.",
     icon: "smile",
-    indication: "Para personas con perdida total de dientes en una arcada",
+    indication: "Para personas con pérdida total de dientes en una arcada",
     benefits: [
-      "Mejora la estetica facial y la sonrisa",
-      "Facilita masticacion y fonacion",
+      "Mejora la estética facial y la sonrisa",
+      "Facilita masticación y fonación",
       "Aporta soporte y confianza al hablar",
     ],
     sessions: "3 a 5 sesiones",
@@ -112,7 +112,7 @@ export default function TratamientosPage() {
                 Contamos con diferentes procedimientos
               </h1>
               <p className="text-on-surface-variant max-w-2xl text-base leading-relaxed font-light">
-                Aplicamos protocolos clinicos personalizados para restauracion, prevencion y rehabilitacion oral en cada etapa de tratamiento.
+                Aplicamos protocolos clínicos personalizados para restauración, prevención y rehabilitación oral en cada etapa de tratamiento.
               </p>
             </div>
 
@@ -153,7 +153,7 @@ export default function TratamientosPage() {
             </blockquote>
             <div className="reveal text-center">
               <p className="text-on-surface-variant mx-auto mb-6 max-w-lg text-sm font-light leading-relaxed">
-                Agenda tu cita para una valoracion personalizada y conoce cual es el tratamiento ideal para ti.
+                Agenda tu cita para una valoración personalizada y conoce cuál es el tratamiento ideal para ti.
               </p>
               <a
                 href="https://wa.me/5212221526613?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20cita"

@@ -12,9 +12,9 @@ type Specialty = {
 
 const SPECIALTIES: Specialty[] = [
   {
-    title: "Especialidad Odontopediatria",
+    title: "Especialidad Odontopediatría",
     description:
-      "Prevencion, diagnostico y tratamiento dental infantil para construir sonrisas sanas desde etapas tempranas.",
+      "Prevención, diagnóstico y tratamiento dental infantil para construir sonrisas sanas desde etapas tempranas.",
     href: "/especialidades/odontopediatria",
     image: "/images/especialidades/odontopediatria/odontopediatria2.jpg",
     icon: (
@@ -27,7 +27,7 @@ const SPECIALTIES: Specialty[] = [
   {
     title: "Especialidad Endodoncia",
     description:
-      "Tratamientos de conducto con enfoque conservador para salvar piezas dentales y eliminar dolor e infeccion.",
+      "Tratamientos de conducto con enfoque conservador para salvar piezas dentales y eliminar dolor e infección.",
     href: "/especialidades/endodoncia",
     image: "/images/especialidades/endodoncia/endodoncia1.jpg",
     icon: (
@@ -38,9 +38,9 @@ const SPECIALTIES: Specialty[] = [
     ),
   },
   {
-    title: "Especialidad Cirugias",
+    title: "Especialidad Cirugías",
     description:
-      "Cirugia oral con planeacion personalizada y tecnologia para procedimientos más precisos y seguros.",
+      "Cirugía oral con planeación personalizada y tecnología para procedimientos más precisos y seguros.",
     href: "/especialidades/cirugias",
     image: "/images/especialidades/cirugias/cirugias1.jpg",
     icon: (
@@ -53,7 +53,7 @@ const SPECIALTIES: Specialty[] = [
   {
     title: "Especialidad Ortodoncia",
     description:
-      "Correccion de alineacion y mordida en niños, adolescentes y adultos con protocolos actuales.",
+      "Corrección de alineación y mordida en niños, adolescentes y adultos con protocolos actuales.",
     href: "/especialidades/ortodoncia",
     image: "/images/especialidades/ortodoncia/ortodoncia.jpg",
     icon: (
@@ -64,9 +64,9 @@ const SPECIALTIES: Specialty[] = [
     ),
   },
   {
-    title: "Especialidad Estetica Dental",
+    title: "Especialidad Estética Dental",
     description:
-      "Diseno de sonrisa, blanqueamientos y tratamientos esteticos para armonia dental y facial.",
+      "Diseño de sonrisa, blanqueamientos y tratamientos estéticos para armonía dental y facial.",
     href: "/especialidades/estetica-dental",
     image: "/images/especialidades/estetica/estetica1.jpg",
     icon: (
@@ -79,7 +79,7 @@ const SPECIALTIES: Specialty[] = [
   {
     title: "Especialidad Periodoncia",
     description:
-      "Cuidado especializado de encias para prevenir gingivitis y periodontitis y mantener soporte dental saludable.",
+      "Cuidado especializado de encías para prevenir gingivitis y periodontitis y mantener soporte dental saludable.",
     href: "/especialidades/periodoncia",
     image: "/images/especialidades/periodoncia/periodoncia1.png",
     icon: (
@@ -106,7 +106,7 @@ export default function EspecialidadesPage() {
                 Especialidades
               </h1>
               <p className="text-on-surface-variant max-w-2xl text-base leading-relaxed font-light">
-                Explora nuestras areas clinicas. Selecciona una especialidad para conocer informacion detallada sobre procedimientos, beneficios y enfoque de atencion.
+                Explora nuestras áreas clínicas. Selecciona una especialidad para conocer información detallada sobre procedimientos, beneficios y enfoque de atención.
               </p>
             </div>
 

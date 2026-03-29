@@ -2,9 +2,21 @@ import Link from "next/link";
 import { SiteFooter, SiteNav } from "../../components/shared/SiteChrome";
 
 const FACTS = [
-  "Las visitas tempranas al odontopediatra permiten educar a niños y padres sobre higiene bucal correcta.",
-  "Acostumbrar a los niños a consulta desde pequenos reduce ansiedad y miedo al dentista en etapas posteriores.",
-  "Los dientes de leche mantienen espacio para la erupcion correcta de dientes permanentes y favorecen la alineacion futura.",
+  {
+    number: "01",
+    text: "Las visitas tempranas al odontopediatra permiten educar a niños y padres sobre higiene bucal correcta.",
+    color: "primary" as const,
+  },
+  {
+    number: "02",
+    text: "Acostumbrar a los niños a consulta desde pequeños reduce ansiedad y miedo al dentista en etapas posteriores.",
+    color: "purple" as const,
+  },
+  {
+    number: "03",
+    text: "Los dientes de leche mantienen espacio para la erupción correcta de dientes permanentes y favorecen la alineación futura.",
+    color: "primary" as const,
+  },
 ];
 
 export default function OdontopediatriaPage() {
@@ -19,17 +31,17 @@ export default function OdontopediatriaPage() {
               <div className="eyebrow mb-4 text-[11px] font-semibold uppercase">Especialidad</div>
               <div className="mb-8 h-px w-12 bg-accent-purple/50" />
               <h1 className="font-headline mb-6 text-4xl leading-tight font-light text-on-background md:text-5xl">
-                Odontopediatria
+                Odontopediatría
               </h1>
               <p className="text-on-surface-variant mb-6 text-base leading-relaxed font-light">
-                Cuida la salud dental de tus hijos con tratamientos especializados en odontopediatria, enfocados en prevenir y tratar problemas dentales desde temprana edad para asegurar sonrisas saludables en el futuro.
+                Cuida la salud dental de tus hijos con tratamientos especializados en odontopediatría, enfocados en prevenir y tratar problemas dentales desde temprana edad para asegurar sonrisas saludables en el futuro.
               </p>
               <p className="text-on-surface-variant text-base leading-relaxed font-light">
-                Las visitas tempranas ayudan a detectar y prevenir caries en dientes de leche, piezas fundamentales para guiar la erupcion correcta de los dientes permanentes.
+                Las visitas tempranas ayudan a detectar y prevenir caries en dientes de leche, piezas fundamentales para guiar la erupción correcta de los dientes permanentes.
               </p>
             </div>
             <div className="hero-image-wrap reveal reveal-d2 aspect-[4/5] overflow-hidden bg-surface-container">
-              <img src="/images/especialidades/odontopediatria/odonto3.png" alt="Odontopediatria" className="h-full w-full object-cover" />
+              <img src="/images/especialidades/odontopediatria/odonto3.png" alt="Odontopediatría" className="h-full w-full object-cover" />
             </div>
           </div>
         </section>
@@ -41,16 +53,16 @@ export default function OdontopediatriaPage() {
                 <img src="/images/especialidades/odontopediatria/odontopediatria2.jpg" alt="Dentista trabajando" className="h-full w-full object-cover" />
               </div>
               <div className="p-6">
-                <h2 className="font-headline mb-3 text-2xl font-light text-on-background">¿Qué es la Odontopediatria?</h2>
+                <h2 className="font-headline mb-3 text-2xl font-light text-on-background">¿Qué es la Odontopediatría?</h2>
                 <p className="text-on-surface-variant text-sm leading-relaxed font-light">
-                  La Odontopediatria es una rama que cuida la salud bucodental durante infancia y adolescencia. El cuidado inicia desde la lactancia materna y la erupcion dental.
+                  La Odontopediatría es una rama que cuida la salud bucodental durante infancia y adolescencia. El cuidado inicia desde la lactancia materna y la erupción dental.
                 </p>
               </div>
             </article>
 
             <article className="specialty-panel reveal reveal-d2">
               <div className="specialty-panel-image">
-                <img src="/images/especialidades/odontopediatria/ondontopediatria1.jpg" alt="Papa con su hijo" className="h-full w-full object-cover" />
+                <img src="/images/especialidades/odontopediatria/ondontopediatria1.jpg" alt="Papá con su hijo" className="h-full w-full object-cover" />
               </div>
               <div className="p-6">
                 <h2 className="font-headline mb-3 text-2xl font-light text-on-background">Prevención de caries</h2>
@@ -83,8 +95,12 @@ export default function OdontopediatriaPage() {
 
             <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
               {FACTS.map((fact, index) => (
-                <article key={fact} className={`fact-chip reveal ${index === 0 ? "reveal-d1" : index === 1 ? "reveal-d2" : "reveal-d3"}`}>
-                  <p className="text-on-surface-variant text-sm leading-relaxed font-light">{fact}</p>
+                <article
+                  key={fact.number}
+                  className={`tip-card tip-card--${fact.color} reveal ${index === 0 ? "reveal-d1" : index === 1 ? "reveal-d2" : "reveal-d3"}`}
+                >
+                  <span className="tip-card__number">{fact.number}</span>
+                  <p className="tip-card__text">{fact.text}</p>
                 </article>
               ))}
             </div>

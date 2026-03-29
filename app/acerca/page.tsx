@@ -13,7 +13,7 @@ export default function AcercaPage() {
               <div className="eyebrow mb-4 text-[11px] font-semibold uppercase">Acerca de Nosotros</div>
               <div className="mb-8 h-px w-12 bg-primary" />
               <h1 className="font-headline mb-5 text-4xl leading-tight font-light text-on-background md:text-5xl">
-                Conocenos 
+                Conócenos
               </h1>
               <p className="text-on-surface-variant max-w-2xl text-base leading-relaxed font-light">
                 Trabajamos para que cada paciente reciba un tratamiento preciso, cómodo y con resultados visibles, respaldado por tecnología avanzada y un equipo humano que te acompaña en todo momento.

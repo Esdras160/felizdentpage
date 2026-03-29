@@ -14,7 +14,7 @@ const VIDEO_TESTIMONIALS: VideoTestimonial[] = [
   },
   {
     id: 2,
-    title: "Testimonio de coronas Esteticas",
+    title: "Testimonio de coronas estéticas",
     embedUrl: "https://www.youtube.com/embed/TLzreW_1fPA",
   },
   {
@@ -81,7 +81,7 @@ export default function TestimoniosPage() {
                       {item.title}
                     </h2>
                     <p className="text-on-surface-variant text-sm leading-relaxed font-light max-w-prose">
-                      Mira este testimonio para conocer el proceso, el antes y despues, y como mejoro la calidad de
+                      Mira este testimonio para conocer el proceso, el antes y después, y cómo mejoró la calidad de
                       vida del paciente.
                     </p>
                   </div>

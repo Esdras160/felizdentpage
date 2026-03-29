@@ -3,19 +3,19 @@ import { Icon, SiteFooter, SiteNav } from "../../components/shared/SiteChrome";
 
 const FAQ = [
   {
-    question: "Que es la periodoncia?",
+    question: "¿Qué es la periodoncia?",
     answer:
-      "Es la especialidad odontologica dedicada a prevenir, diagnosticar y tratar enfermedades que afectan encias y tejidos de soporte de los dientes.",
+      "Es la especialidad odontológica dedicada a prevenir, diagnosticar y tratar enfermedades que afectan encías y tejidos de soporte de los dientes.",
   },
   {
-    question: "Que es la gingivitis?",
+    question: "¿Qué es la gingivitis?",
     answer:
-      "Es una inflamacion inicial de las encias causada por acumulacion de placa bacteriana. Puede ser reversible si se trata de forma oportuna.",
+      "Es una inflamación inicial de las encías causada por acumulación de placa bacteriana. Puede ser reversible si se trata de forma oportuna.",
   },
   {
-    question: "Que es la periodontitis?",
+    question: "¿Qué es la periodontitis?",
     answer:
-      "Es la fase avanzada de enfermedad periodontal. Si no se controla, puede causar dano en hueso y perdida de piezas dentales.",
+      "Es la fase avanzada de enfermedad periodontal. Si no se controla, puede causar daño en hueso y pérdida de piezas dentales.",
   },
 ];
 
@@ -34,13 +34,13 @@ export default function PeriodonciaPage() {
                 Periodoncia
               </h1>
               <p className="text-on-surface-variant mb-5 text-base leading-relaxed font-light">
-                Cuida la salud de tus encias con tratamientos especializados enfocados en prevenir y tratar enfermedades periodontales para mantener una sonrisa saludable.
+                Cuida la salud de tus encías con tratamientos especializados enfocados en prevenir y tratar enfermedades periodontales para mantener una sonrisa saludable.
               </p>
               <p className="text-on-surface-variant mb-5 text-base leading-relaxed font-light">
-                En Felizdent contamos con especialistas altamente capacitados para periodontitis y gingivitis. Segun estudios, más del 80% de personas mayores de 35 años presenta algun problema gingival.
+                En Felizdent contamos con especialistas altamente capacitados para periodontitis y gingivitis. Según estudios, más del 80% de personas mayores de 35 años presenta algún problema gingival.
               </p>
               <p className="text-on-surface-variant text-base leading-relaxed font-light">
-                Si no se trata a tiempo, la enfermedad periodontal puede avanzar hasta la perdida de dientes. Actuar en etapas tempranas marca la diferencia.
+                Si no se trata a tiempo, la enfermedad periodontal puede avanzar hasta la pérdida de dientes. Actuar en etapas tempranas marca la diferencia.
               </p>
             </div>
             <div className="hero-image-wrap reveal reveal-d2 aspect-[4/5] overflow-hidden bg-surface-container">
@@ -73,9 +73,9 @@ export default function PeriodonciaPage() {
         <section className="section-frame bg-surface-container/40 py-20 md:py-24">
           <div className="mx-auto max-w-6xl px-6 md:px-8">
             <article className="reveal rounded-2xl border border-outline/60 bg-white p-7 md:p-9">
-              <h2 className="font-headline mb-4 text-3xl font-light text-on-background">Como tener las encias siempre sanas?</h2>
+              <h2 className="font-headline mb-4 text-3xl font-light text-on-background">¿Cómo tener las encías siempre sanas?</h2>
               <p className="text-on-surface-variant text-sm leading-relaxed font-light">
-                Mantener una higiene bucodental diaria correcta es clave. La tecnica de cepillado es importante, pero no suficiente por si sola para controlar la acumulacion bacteriana. Por ello se recomienda acudir periodicamente a revision profesional para valorar dientes y encias y realizar tratamientos preventivos o terapeuticos cuando se requiera.
+                Mantener una higiene bucodental diaria correcta es clave. La técnica de cepillado es importante, pero no suficiente por sí sola para controlar la acumulación bacteriana. Por ello se recomienda acudir periódicamente a revisión profesional para valorar dientes y encías y realizar tratamientos preventivos o terapéuticos cuando se requiera.
               </p>
             </article>
 

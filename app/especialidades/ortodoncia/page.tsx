@@ -4,25 +4,25 @@ import { SiteFooter, SiteNav } from "../../components/shared/SiteChrome";
 const TREATMENT_OPTIONS = [
   {
     title: "Ortodoncia preventiva",
-    text: "Evaluacion temprana para guiar crecimiento maxilar y detectar habitos que puedan afectar alineacion y mordida en niños.",
+    text: "Evaluación temprana para guiar crecimiento maxilar y detectar hábitos que puedan afectar alineación y mordida en niños.",
     image: "/images/pediatria.jpg",
   },
   {
     title: "Brackets convencionales",
-    text: "Sistema eficaz para corregir apiñamiento, espacios y maloclusiones complejas con control biomecanico continuo.",
+    text: "Sistema eficaz para corregir apiñamiento, espacios y maloclusiones complejas con control biomecánico continuo.",
     image: "/images/ortodoncia.jpg",
   },
   {
     title: "Alineadores esteticos",
-    text: "Alternativa discreta y removible para casos seleccionados, con planificacion digital y seguimiento profesional.",
+    text: "Alternativa discreta y removible para casos seleccionados, con planificación digital y seguimiento profesional.",
     image: "/images/smile-design.jpg",
   },
 ];
 
 const WHY_IT_MATTERS = [
   "Una mordida equilibrada facilita higiene bucal y reduce riesgo de desgaste prematuro dental.",
-  "La correccion de posicion dental mejora funcion al masticar, hablar y distribuir fuerzas oclusales.",
-  "Un tratamiento ortodontico planificado favorece estabilidad a largo plazo y armonia facial.",
+  "La corrección de posición dental mejora función al masticar, hablar y distribuir fuerzas oclusales.",
+  "Un tratamiento ortodóntico planificado favorece estabilidad a largo plazo y armonía facial.",
 ];
 
 export default function OrtodonciaPage() {
@@ -40,7 +40,7 @@ export default function OrtodonciaPage() {
                 Ortodoncia
               </h1>
               <p className="text-on-surface-variant mb-5 text-base leading-relaxed font-light">
-                La Ortodoncia corrige la posicion de dientes y mordida para mejorar funcion, salud oral y estetica de manera integral.
+                La Ortodoncia corrige la posición de dientes y mordida para mejorar función, salud oral y estética de manera integral.
               </p>
               <p className="text-on-surface-variant mb-5 text-base leading-relaxed font-light">
                 Atendemos niños, adolescentes y adultos con diagnóstico personalizado para definir el plan más adecuado en cada etapa.
@@ -81,7 +81,7 @@ export default function OrtodonciaPage() {
         <section className="section-frame bg-surface-container/40 py-20 md:py-24">
           <div className="mx-auto max-w-6xl px-6 md:px-8">
             <article className="reveal rounded-2xl border border-outline/60 bg-white p-7 md:p-9">
-              <h2 className="font-headline mb-4 text-3xl font-light text-on-background">Por que iniciar un tratamiento ortodontico?</h2>
+              <h2 className="font-headline mb-4 text-3xl font-light text-on-background">¿Por qué iniciar un tratamiento ortodóntico?</h2>
               <div className="space-y-3">
                 {WHY_IT_MATTERS.map((item) => (
                   <p key={item} className="text-on-surface-variant text-sm leading-relaxed font-light">

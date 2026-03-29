@@ -18,16 +18,16 @@ const DENTISTS: DentistProfile[] = [
     role: "Cirujano Dentista",
     specialty: "Cirugía Maxilofacial",
     education: [
-      "Lic. en Cirujano Dentista, Facultad de Estomatologia, Benemerita Universidad Autonoma de Puebla (1995).",
-      "Especialidad en Cirugia Maxilofacial, Hospital Universitario de Puebla, Benemerita Universidad Autonoma de Puebla (1999).",
+      "Lic. en Cirujano Dentista, Facultad de Estomatología, Benemérita Universidad Autónoma de Puebla (1995).",
+      "Especialidad en Cirugía Maxilofacial, Hospital Universitario de Puebla, Benemérita Universidad Autónoma de Puebla (1999).",
     ],
-    detailsTitle: "Nivel academico",
+    detailsTitle: "Nivel académico",
     details: [
-      "Lic. en Cirujano Dentista, Facultad de Estomatologia, Benemerita Universidad Autonoma de Puebla (1995).",
-      "Especialidad en Cirugia Maxilofacial, Hospital Universitario de Puebla, Benemerita Universidad Autonoma de Puebla (1999).",
-      "Maestria en Ciencias de la Educacion, Instituto de Estudios Universitarios (2020).",
-      "Doctorado en Ciencias de la Educacion, Centro de Investigacion Cientifica, Academica y de Postgrado (2024).",
-      "Doctorado en Salud Publica, Universidad Contemporanea de las Americas (Acta de examen en proceso de titulacion).",
+      "Lic. en Cirujano Dentista, Facultad de Estomatología, Benemérita Universidad Autónoma de Puebla (1995).",
+      "Especialidad en Cirugía Maxilofacial, Hospital Universitario de Puebla, Benemérita Universidad Autónoma de Puebla (1999).",
+      "Maestría en Ciencias de la Educación, Instituto de Estudios Universitarios (2020).",
+      "Doctorado en Ciencias de la Educación, Centro de Investigación Científica, Académica y de Postgrado (2024).",
+      "Doctorado en Salud Pública, Universidad Contemporánea de las Américas (Acta de examen en proceso de titulación).",
     ],
     image: "/images/especialistas/fotodefecto.png",
   },
@@ -248,13 +248,13 @@ export default function DentistasPage() {
         <section className="section-frame relative pt-36 pb-20 md:pt-44 md:pb-24">
           <div className="mx-auto max-w-6xl px-6 md:px-8">
             <div className="reveal mb-10">
-              <div className="eyebrow mb-4 text-[11px] font-semibold uppercase">Equipo clinico</div>
+              <div className="eyebrow mb-4 text-[11px] font-semibold uppercase">Equipo clínico</div>
               <div className="mb-8 h-px w-12 bg-accent-purple/50" />
               <h1 className="font-headline mb-6 text-4xl leading-tight font-light tracking-tight text-on-background md:text-5xl">
                 Dentistas
               </h1>
               <p className="text-on-surface-variant max-w-3xl text-base leading-relaxed font-light">
-                Conoce al equipo de Felizdent. Cada especialista aporta experiencia clinica, formacion continua y atencion centrada en la persona.
+                Conoce al equipo de Felizdent. Cada especialista aporta experiencia clínica, formación continua y atención centrada en la persona.
               </p>
             </div>
 
