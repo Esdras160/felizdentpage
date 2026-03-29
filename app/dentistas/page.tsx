@@ -6,6 +6,8 @@ type DentistProfile = {
   education: string[];
   detailsTitle?: string;
   details?: string[];
+  details2Title?: string;
+  details2?: string[];
   image: string;
   specialty?: string;
 };
@@ -30,67 +32,86 @@ const DENTISTS: DentistProfile[] = [
     image: "/images/especialistas/fotodefecto.png",
   },
   {
-    name: "Dra. Maria Elena Rodriguez Alvarez",
+    name: "Dra. María Elena Rodríguez Álvarez",
     role: "Estomatología",
     specialty: "Estomatología Pediátrica",
     education: [
-      "Lic. en Estomatologia, Benemerita Universidad Autonoma de Puebla (1998-2002).",
-      "Especialidad en Estomatologia Pediatrica, Instituto Nacional de Pediatria, Mexico D.F. (2008-2010).",
+      "Lic. en Estomatología, Benemérita Universidad Autónoma de Puebla (1998-2002).",
+      "Especialidad en Estomatología Pediátrica, Instituto Nacional de Pediatría, México D.F. (2008-2010).",
     ],
-    detailsTitle: "Experiencia",
+    detailsTitle: "Nivel académico",
     details: [
-      "2010 a la fecha: Estomatologa Pediatra Clinico en Risu Clinica Dental.",
-      "Enero 2011 - Junio 2014: Estomatologa Pediatra Clinico en Hospital Universitario de Puebla.",
-      "Junio 2015 - Diciembre 2019: Gestora de Seguro Popular, Regimen Estatal de Proteccion Social en Salud.",
-      "Agosto 2021 - Junio 2022: Profesora en CESES (modalidad en linea).",
+      "Lic. en Estomatología, Benemérita Universidad Autónoma de Puebla (1998-2002).",
+      "Especialidad en Estomatología Pediátrica, Instituto Nacional de Pediatría, México D.F. (2008-2010).",
+    ],
+    details2Title: "Experiencia",
+    details2: [
+      "2010 a la fecha: Estomatóloga Pediatra · Clínico · Risu Clínica Dental.",
+      "Enero 2011 – Junio 2014: Estomatóloga Pediatra · Clínico · Hospital Universitario de Puebla.",
+      "Junio 2015 – Diciembre 2019: Gestora de Seguro Popular · Operativo · Régimen Estatal de Protección Social en Salud.",
+      "Agosto 2021 – Junio 2022: Profesora en Centro de Investigación y Estudios Superiores en Estomatología y Salud S.C. (CESES), modalidad en línea.",
     ],
     image: "/images/especialistas/fotodefecto.png",
   },
   {
-    name: "Dra. Isabel Chavez",
+    name: "Dra. Isabel Chávez",
     role: "Estomatología",
     specialty: "Estomatología Pediátrica",
     education: [
-      "Lic. en Estomatologia, Benemerita Universidad Autonoma de Puebla (2002-2006).",
-      "Especialidad en Estomatologia Pediatrica, Hospital para el Nino Poblano (2009-2011).",
+      "Lic. en Estomatología, Benemérita Universidad Autónoma de Puebla (2002-2006).",
+      "Especialidad en Estomatología Pediátrica, Hospital para el Niño Poblano (2009-2011).",
     ],
-    detailsTitle: "Diplomados",
+    detailsTitle: "Nivel académico",
     details: [
-      "Diplomado en Investigacion Clinica, Benemerita Universidad Autonoma de Puebla (2009-2010, 240 horas).",
-      "Diplomado de Ortopedia Maxilar con Aplicacion Clinica, BUAP Campus Tehuacan (2019-2021).",
-      "Diplomado de Actualizacion en Ortopedia y Odontopediatria, Desarrollo Especializado con Nuevas Tecnicas (2021-2022).",
+      "Lic. en Estomatología, Benemérita Universidad Autónoma de Puebla (2002-2006).",
+      "Especialidad en Estomatología Pediátrica, Hospital para el Niño Poblano (2009-2011).",
+    ],
+    details2Title: "Diplomados",
+    details2: [
+      "Diplomado en Investigación Clínica, Benemérita Universidad Autónoma de Puebla (2009-2010, 240 horas).",
+      "Diplomado de Ortopedia Maxilar con Aplicación Clínica, Benemérita Universidad Autónoma de Puebla, Campus Tehuacán (2019-2021).",
+      "Diplomado de Actualización en Ortopedia y Odontopediatría, Desarrollo Especializado con Nuevas Técnicas de Actualización (2021-2022).",
     ],
     image: "/images/especialistas/dentistaIsabel.jpg",
   },
   {
-    name: "Dra. Yazmin Tellez Bautista",
+    name: "Dra. Yazmin Téllez Bautista",
     role: "Estomatología",
     specialty: "Endodoncia",
     education: [
-      "Lic. en Estomatologia, Benemerita Universidad Autonoma de Puebla (1998-2003).",
-      "Especialidad en Endodoncia, Centro Mexicano en Estomatologia (2009-2011).",
+      "Lic. en Estomatología, Benemérita Universidad Autónoma de Puebla (1998-2003).",
+      "Especialidad en Endodoncia, Centro Mexicano en Estomatología (2009-2011).",
     ],
-    detailsTitle: "Diplomados",
+    detailsTitle: "Nivel académico",
     details: [
-      "Diplomado de Medicina Interna en Estomatologia, BUAP (2012-2013).",
-      "Diplomado en Diagnostico y Tratamientos Basicos Periodontales, BUAP (abril 2015-febrero 2016).",
-      "Diplomado en Odontologia Estetica y Restauradora, Colegio Dental del Estado de Mexico (2022).",
-      "Diplomado en Cirugia Plastica Periodontal, Colegio de Actualizacion Profesional Tepeaca (2024).",
+      "Lic. en Estomatología, Benemérita Universidad Autónoma de Puebla (1998-2003).",
+      "Especialidad en Endodoncia, Centro Mexicano en Estomatología (2009-2011).",
+    ],
+    details2Title: "Diplomados",
+    details2: [
+      "Diplomado de Medicina Interna en Estomatología, Benemérita Universidad Autónoma de Puebla (2012-2013).",
+      "Diplomado en Diagnóstico y Tratamientos Básicos Periodontales, Benemérita Universidad Autónoma de Puebla (abril 2015 – febrero 2016).",
+      "Diplomado en Odontología Estética y Restauradora, Colegio Dental del Estado de México, A.C. (2022).",
+      "Diplomado en Cirugía Plástica Periodontal, Colegio de Actualización Profesional Tepeaca (2024).",
     ],
     image: "/images/especialistas/dentistaYazmin.jpg",
   },
   {
-    name: "Dra. Bricia Pascuala Lopez Lopez",
+    name: "Dra. Bricia Pascuala López López",
     role: "Estomatología",
-    specialty: "Biocosmetica Dental",
+    specialty: "Estomatología",
     education: [
-      "Lic. en Estomatologia, Benemerita Universidad Autonoma de Puebla (2008-2013).",
+      "Lic. en Estomatología, Benemérita Universidad Autónoma de Puebla (2008-2013).",
     ],
-    detailsTitle: "Diplomados",
+    detailsTitle: "Nivel académico",
     details: [
-      "Diplomado de Medicina Interna en Estomatologia, avalada por BUAP (2019-2020).",
-      "Diplomado de Biocosmetica Dental, Colegio de Actualizacion de Tepeaca (octubre 2021-septiembre 2022).",
-      "Diplomado en Prostodoncia Total, Colegio de Actualizacion de Tepeaca (noviembre 2022-junio 2023).",
+      "Lic. en Estomatología, Benemérita Universidad Autónoma de Puebla (2008-2013).",
+    ],
+    details2Title: "Diplomados",
+    details2: [
+      "Diplomado de Medicina Interna en Estomatología, avalado por la Benemérita Universidad Autónoma de Puebla (2019-2020).",
+      "Diplomado de Biocosmética Dental, Colegio de Actualización de Tepeaca (octubre 2021 – septiembre 2022).",
+      "Diplomado en Prostodoncia Total, Colegio de Actualización de Tepeaca (noviembre 2022 – junio 2023).",
     ],
     image: "/images/especialistas/dentistaBricia.jpg",
   },
@@ -99,94 +120,120 @@ const DENTISTS: DentistProfile[] = [
     role: "Estomatología",
     specialty: "Ortopedia Maxilar",
     education: [
-      "Lic. en Estomatologia, Benemerita Universidad Autonoma de Puebla (1998-2003).",
-      "Especialidad en Ortopedia, Universidad Nacional Autonoma de Mexico (2009-2011).",
+      "Lic. en Estomatología, Benemérita Universidad Autónoma de Puebla (1998-2003).",
+      "Especialidad en Ortopedia, Universidad Nacional Autónoma de México (UNAM) (2009-2011).",
+    ],
+    detailsTitle: "Nivel académico",
+    details: [
+      "Lic. en Estomatología, Benemérita Universidad Autónoma de Puebla (1998-2003).",
+      "Especialidad en Ortopedia, Universidad Nacional Autónoma de México (UNAM) (2009-2011).",
     ],
     image: "/images/especialistas/dentistaElio.jpg",
   },
   {
-    name: "Dr. Jose Angel Perez Benitez",
+    name: "Dr. José Ángel Pérez Benítez",
     role: "Estomatología",
     specialty: "Ortodoncia y Endodoncia",
     education: [
-      "Lic. en Estomatologia, Universidad Mexico Americana del Golfo, Puebla (2011-2015).",
-      "Especialidad en Endodoncia, Centro Mexicano en Estomatologia (2016-2018).",
+      "Lic. en Estomatología, Universidad México Americana del Golfo, Puebla (2011-2015).",
+      "Especialidad en Endodoncia, Centro Mexicano en Estomatología (2016-2018).",
+      "Especialidad en Ortodoncia, Centro Universitario Interamericano del Pacífico (CEUNI), Plantel Golfo Centro, Heroica Puebla de Zaragoza (2019-2021).",
     ],
-    detailsTitle: "Nivel academico",
+    detailsTitle: "Nivel académico",
     details: [
-      "Lic. en Estomatologia, Universidad Mexico Americana del Golfo, Puebla (2011-2015).",
-      "Especialidad en Endodoncia, Centro Mexicano en Estomatologia (2016-2018).",
-      "Especialidad en Ortodoncia, Centro Universitario Interamericano del Pacifico (2019-2021).",
+      "Lic. en Estomatología, Universidad México Americana del Golfo, Puebla (2011-2015).",
+      "Especialidad en Endodoncia, Centro Mexicano en Estomatología (2016-2018).",
+      "Especialidad en Ortodoncia, Centro Universitario Interamericano del Pacífico (CEUNI), Plantel Golfo Centro, Heroica Puebla de Zaragoza (2019-2021).",
     ],
     image: "/images/especialistas/dentistajoseAngel.jpg",
   },
   {
     name: "Dra. Vianey Joaquina Mateo Barrales",
     role: "Estomatología",
-    specialty: "Estomatología",
+    specialty: "Estomatología y Salud",
     education: [
-      "Lic. en Estomatologia y Salud, Centro de Investigacion y Estudios Superiores.",
+      "Lic. en Estomatología y Salud, Centro de Investigación y Estudios Superiores.",
     ],
-    detailsTitle: "Experiencia",
+    detailsTitle: "Nivel académico",
     details: [
-      "Servicio social en Clinica Particular Dental Dorada como auxiliar dental en diversas areas (2022-2023).",
-      "Trabajo en Dental Dorada como auxiliar en endodoncia, ortodoncia, rehabilitacion, cirugia bucal y recepcion (2023-2024).",
+      "Lic. en Estomatología y Salud, Centro de Investigación y Estudios Superiores.",
+    ],
+    details2Title: "Experiencia",
+    details2: [
+      "2022-2023: Servicio social en Clínica Particular Dental Dorada como auxiliar dental en diversas áreas odontológicas, incluyendo limpieza y desinfección de instrumental.",
+      "2023-2024: Auxiliar en Dental Dorada en áreas de Endodoncia, Ortodoncia, Rehabilitación, Cirugía Bucal y Recepción.",
     ],
     image: "/images/especialistas/dentistaVianey.jpg",
   },
   {
-    name: "Dra. Maria Guadalupe Perez Ponce",
+    name: "Dra. María Guadalupe Pérez Ponce",
     role: "Odontología",
     specialty: "Odontología General",
     education: [
-      "Lic. en Odontologia, Centro de Estudios Superiores de Tepeaca (2018-2023).",
+      "Lic. en Odontología, Centro de Estudios Superiores de Tepeaca (2018-2023).",
     ],
-    detailsTitle: "Experiencia",
+    detailsTitle: "Nivel académico",
     details: [
-      "OPPSS en Centro de Estudios Superiores de Tepeaca.",
-      "Uso de aparatologia de rayos X, profilaxis, educacion de higiene oral y restauraciones esteticas.",
+      "Lic. en Odontología, Centro de Estudios Superiores de Tepeaca (2018-2023).",
+    ],
+    details2Title: "Experiencia",
+    details2: [
+      "OPPSS realizado en Centro de Estudios Superiores de Tepeaca: uso de aparatología de rayos X, profilaxis, educación de higiene oral y restauraciones estéticas.",
     ],
     image: "/images/especialistas/dentistaMariaGuadalupe.jpg",
   },
   {
-    name: "Dra. Aylin Zayagos Fernandez",
+    name: "Dra. Aylin Zayagos Fernández",
     role: "Estomatología",
-    specialty: "Estomatología",
+    specialty: "Lic. en Estomatología",
     education: [
-      "Facultad de Estomatologia, Benemerita Universidad Autonoma de Puebla (2018-2024).",
+      "Lic. en Estomatología, Benemérita Universidad Autónoma de Puebla, Facultad de Estomatología (2018-2024).",
     ],
-    detailsTitle: "Experiencia",
+    detailsTitle: "Nivel académico",
     details: [
-      "Servicio social culminado en el periodo enero 2024-febrero 2025 en area de practica profesional con jornadas en diferentes comunidades.",
+      "Lic. en Estomatología, Benemérita Universidad Autónoma de Puebla, Facultad de Estomatología (2018-2024).",
+    ],
+    details2Title: "Experiencia",
+    details2: [
+      "Servicio social culminado en el periodo enero 2024 – febrero 2025, en área de práctica profesional con jornadas en diferentes comunidades.",
     ],
     image: "/images/especialistas/dentistaAylin.jpg",
   },
   {
-    name: "Dra. Salma Yenifer Rodriguez Camarillo",
+    name: "Dra. Salma Yenifer Rodríguez Camarillo",
     role: "Estomatología",
-    specialty: "Estomatología",
+    specialty: "Lic. en Estomatología",
     education: [
-      "Lic. en Estomatologia, Benemerita Universidad Autonoma de Puebla (2018-2023).",
+      "Lic. en Estomatología, Benemérita Universidad Autónoma de Puebla (2018-2023).",
     ],
-    detailsTitle: "Experiencia",
+    detailsTitle: "Nivel académico",
     details: [
-      "Servicio social en Clinica de Estomatologia del CRS.",
-      "Experiencia en cirugias periodontales y alargamiento de corona (2023-2024).",
+      "Lic. en Estomatología, Benemérita Universidad Autónoma de Puebla (2018-2023).",
+    ],
+    details2Title: "Experiencia",
+    details2: [
+      "Servicio social en Clínica de Estomatología del CRS.",
+      "Experiencia en cirugías periodontales: Alargamiento de Corona (2023-2024).",
     ],
     image: "/images/especialistas/dentistaSalma.jpg",
   },
   {
-    name: "Dra. Sandra Velazquez",
+    name: "Dra. Sandra Velázquez",
     role: "Estomatología",
     specialty: "Estomatología Pediátrica",
     education: [
-      "Lic. en Estomatologia, Benemerita Universidad Autonoma de Puebla (2013-2019).",
-      "Especialidad en Estomatologia Pediatrica, Hospital para el Nino Poblano (2023-2025).",
+      "Lic. en Estomatología, Benemérita Universidad Autónoma de Puebla (2013-2019).",
+      "Especialidad en Estomatología Pediátrica, Hospital para el Niño Poblano (2023-2025).",
     ],
-    detailsTitle: "Experiencia",
+    detailsTitle: "Nivel académico",
     details: [
-      "Consultorio | Asistente dental (febrero 2019, 3 meses): asistir en consulta, toma de radiografias periapicales, lavado y esterilizado de instrumental.",
-      "Consultorio | Asistente dental (mayo 2019, 1 mes): asistir en consulta, lavado y esterilizado de instrumental, toma de impresiones y vaciado de modelos.",
+      "Lic. en Estomatología, Benemérita Universidad Autónoma de Puebla (2013-2019).",
+      "Especialidad en Estomatología Pediátrica, Hospital para el Niño Poblano (2023-2025).",
+    ],
+    details2Title: "Experiencia",
+    details2: [
+      "Febrero 2019 (3 meses): Asistente dental – asistencia en consulta, toma de radiografías periapicales, lavado y esterilizado de instrumental.",
+      "Mayo 2019 (1 mes): Asistente dental – asistencia en consulta, lavado y esterilizado de instrumental, toma de impresiones y vaciado de modelos.",
     ],
     image: "/images/especialistas/dentistaSandra.jpg",
   },
@@ -232,6 +279,16 @@ export default function DentistasPage() {
                               <p key={item} className="text-on-surface-variant text-xs leading-relaxed font-light">• {item}</p>
                             ))}
                           </div>
+                          {dentist.details2 && dentist.details2.length > 0 && (
+                            <>
+                              <h3 className="text-on-background mt-4 mb-3 text-xs font-semibold tracking-widest uppercase">{dentist.details2Title || "Experiencia"}</h3>
+                              <div className="space-y-2">
+                                {dentist.details2.map((item) => (
+                                  <p key={item} className="text-on-surface-variant text-xs leading-relaxed font-light">• {item}</p>
+                                ))}
+                              </div>
+                            </>
+                          )}
                         </div>
                       </details>
                     )}
